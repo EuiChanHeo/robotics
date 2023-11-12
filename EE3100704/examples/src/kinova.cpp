@@ -4,7 +4,6 @@
 
 #include "raisim/RaisimServer.hpp"
 #include "raisim/World.hpp"
-
 #include "cubicTrajectoryGenerator.hpp"
 #include "robotController.hpp"
 #include "setObstacle.hpp"

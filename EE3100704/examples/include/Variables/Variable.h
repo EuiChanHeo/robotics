@@ -1,0 +1,8 @@
+//
+// Created by percy on 23. 11. 12.
+//
+
+#ifndef EE3100704_PROJECTS_VARIABLE_H
+#define EE3100704_PROJECTS_VARIABLE_H
+
+#endif //EE3100704_PROJECTS_VARIABLE_H
