@@ -1,17 +1,13 @@
 #include "../include/canine.h"
 #include "robot_UI/robot_ui//mainwindow.h"
 #include <QApplication>
+#include <QThread>
 
-int main (int argc, char* argv[]) {
-    auto binaryPath = raisim::Path::setFromArgv(argv[0]);
-
+void Canine::RunPart()
+{
     // create raisim world
     raisim::World world;
     world.setTimeStep(0.001);
-
-    QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
 
     // create objects
     auto ground = world.addGround();
@@ -23,6 +19,7 @@ int main (int argc, char* argv[]) {
     server.focusOn(canine);
     server.launchServer();
     canine->setName("canine");
+
 
     // set obstacle
     setObstacle setObstacle;
@@ -55,7 +52,6 @@ int main (int argc, char* argv[]) {
     controller.setPDgain(jointPgain,jointDgain);
     controller.setStand(&world, canine);
     controller.setSit(&world, canine);
-
     // make trajectory and run
     char run;
     while (1)
@@ -80,6 +76,28 @@ int main (int argc, char* argv[]) {
     }
 
     server.killServer();
+
+}
+
+class CommunicationThread : public QThread
+{
+public:
+    void run() override
+    {
+        Canine test;
+        test.RunPart();
+    }
+
+};
+
+int main (int argc, char* argv[]) {
+    auto binaryPath = raisim::Path::setFromArgv(argv[0]);
+
+    QApplication a(argc, argv);
+    MainWindow w;
+    CommunicationThread communicationThread;
+    communicationThread.start();
+    w.show();
 
     return a.exec();
 

@@ -17,5 +17,6 @@ private:
 
 public:
 
+    void RunPart();
 };
 #endif //EE3100704_PROJECTS_CANINE_H

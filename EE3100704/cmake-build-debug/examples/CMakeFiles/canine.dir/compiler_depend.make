@@ -2851,7 +2851,9 @@ examples/CMakeFiles/canine.dir/src/canine.cpp.o: /home/percy/robot_ws/EE3100704/
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qinputmethod.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QThread \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qthread.h
 
 examples/CMakeFiles/canine.dir/src/robot_UI/robot_ui/mainwindow.cpp.o: /home/percy/robot_ws/EE3100704/examples/src/robot_UI/robot_ui/mainwindow.cpp \
   /usr/include/stdc-predef.h \
@@ -3163,7 +3165,7 @@ examples/CMakeFiles/canine.dir/src/robot_UI/robot_ui/mainwindow.cpp.o: /home/per
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
-  /home/percy/robot_ws/EE3100704/examples/src/robot_UI/robot_ui/ui_mainwindow.h \
+  examples/canine_autogen/include/ui_mainwindow.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
@@ -3179,6 +3181,9 @@ examples/CMakeFiles/canine.dir/src/robot_UI/robot_ui/mainwindow.cpp.o: /home/per
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qinputmethod.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenuBar \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenubar.h \
@@ -3197,9 +3202,17 @@ examples/CMakeFiles/canine.dir/src/robot_UI/robot_ui/mainwindow.cpp.o: /home/per
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenuBar:
 
-/home/percy/robot_ws/EE3100704/examples/src/robot_UI/robot_ui/ui_mainwindow.h:
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel:
+
+examples/canine_autogen/include/ui_mainwindow.h:
 
 /home/percy/robot_ws/EE3100704/examples/src/robot_UI/robot_ui/mainwindow.cpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qthread.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h:
 
@@ -4500,6 +4513,8 @@ examples/canine_autogen/mocs_compilation.cpp:
 /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h:
 
 /usr/include/c++/9/iomanip:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QThread:
 
 /usr/include/c++/9/queue:
 

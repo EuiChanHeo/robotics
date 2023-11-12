@@ -273,6 +273,9 @@ examples/CMakeFiles/canine.dir/src/robot_UI/robot_ui/mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qinputmethod.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenuBar \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenubar.h \
