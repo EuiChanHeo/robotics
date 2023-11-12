@@ -85,6 +85,51 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/snap/clion/250/bin/cmake/linux/x64/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/snap/clion/250/bin/cmake/linux/x64/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/snap/clion/250/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/snap/clion/250/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/snap/clion/250/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/snap/clion/250/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
 	cd /home/percy/robot_ws/EE3100704/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/percy/robot_ws/EE3100704/cmake-build-debug/CMakeFiles /home/percy/robot_ws/EE3100704/cmake-build-debug/examples//CMakeFiles/progress.marks
@@ -157,6 +202,48 @@ robot: examples/CMakeFiles/robot.dir/rule
 robot/fast:
 	cd /home/percy/robot_ws/EE3100704/cmake-build-debug && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/robot.dir/build.make examples/CMakeFiles/robot.dir/build
 .PHONY : robot/fast
+
+# Convenience name for target.
+examples/CMakeFiles/kinova_autogen.dir/rule:
+	cd /home/percy/robot_ws/EE3100704/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/kinova_autogen.dir/rule
+.PHONY : examples/CMakeFiles/kinova_autogen.dir/rule
+
+# Convenience name for target.
+kinova_autogen: examples/CMakeFiles/kinova_autogen.dir/rule
+.PHONY : kinova_autogen
+
+# fast build rule for target.
+kinova_autogen/fast:
+	cd /home/percy/robot_ws/EE3100704/cmake-build-debug && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/kinova_autogen.dir/build.make examples/CMakeFiles/kinova_autogen.dir/build
+.PHONY : kinova_autogen/fast
+
+# Convenience name for target.
+examples/CMakeFiles/canine_autogen.dir/rule:
+	cd /home/percy/robot_ws/EE3100704/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/canine_autogen.dir/rule
+.PHONY : examples/CMakeFiles/canine_autogen.dir/rule
+
+# Convenience name for target.
+canine_autogen: examples/CMakeFiles/canine_autogen.dir/rule
+.PHONY : canine_autogen
+
+# fast build rule for target.
+canine_autogen/fast:
+	cd /home/percy/robot_ws/EE3100704/cmake-build-debug && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/canine_autogen.dir/build.make examples/CMakeFiles/canine_autogen.dir/build
+.PHONY : canine_autogen/fast
+
+# Convenience name for target.
+examples/CMakeFiles/robot_autogen.dir/rule:
+	cd /home/percy/robot_ws/EE3100704/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/robot_autogen.dir/rule
+.PHONY : examples/CMakeFiles/robot_autogen.dir/rule
+
+# Convenience name for target.
+robot_autogen: examples/CMakeFiles/robot_autogen.dir/rule
+.PHONY : robot_autogen
+
+# fast build rule for target.
+robot_autogen/fast:
+	cd /home/percy/robot_ws/EE3100704/cmake-build-debug && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/robot_autogen.dir/build.make examples/CMakeFiles/robot_autogen.dir/build
+.PHONY : robot_autogen/fast
 
 __/tools/src/cubicTrajectoryGenerator.o: __/tools/src/cubicTrajectoryGenerator.cpp.o
 .PHONY : __/tools/src/cubicTrajectoryGenerator.o
@@ -278,6 +365,78 @@ __/tools/src/setTime.cpp.s:
 	cd /home/percy/robot_ws/EE3100704/cmake-build-debug && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/robot.dir/build.make examples/CMakeFiles/robot.dir/__/tools/src/setTime.cpp.s
 .PHONY : __/tools/src/setTime.cpp.s
 
+canine_autogen/mocs_compilation.o: canine_autogen/mocs_compilation.cpp.o
+.PHONY : canine_autogen/mocs_compilation.o
+
+# target to build an object file
+canine_autogen/mocs_compilation.cpp.o:
+	cd /home/percy/robot_ws/EE3100704/cmake-build-debug && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/canine.dir/build.make examples/CMakeFiles/canine.dir/canine_autogen/mocs_compilation.cpp.o
+.PHONY : canine_autogen/mocs_compilation.cpp.o
+
+canine_autogen/mocs_compilation.i: canine_autogen/mocs_compilation.cpp.i
+.PHONY : canine_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+canine_autogen/mocs_compilation.cpp.i:
+	cd /home/percy/robot_ws/EE3100704/cmake-build-debug && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/canine.dir/build.make examples/CMakeFiles/canine.dir/canine_autogen/mocs_compilation.cpp.i
+.PHONY : canine_autogen/mocs_compilation.cpp.i
+
+canine_autogen/mocs_compilation.s: canine_autogen/mocs_compilation.cpp.s
+.PHONY : canine_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+canine_autogen/mocs_compilation.cpp.s:
+	cd /home/percy/robot_ws/EE3100704/cmake-build-debug && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/canine.dir/build.make examples/CMakeFiles/canine.dir/canine_autogen/mocs_compilation.cpp.s
+.PHONY : canine_autogen/mocs_compilation.cpp.s
+
+kinova_autogen/mocs_compilation.o: kinova_autogen/mocs_compilation.cpp.o
+.PHONY : kinova_autogen/mocs_compilation.o
+
+# target to build an object file
+kinova_autogen/mocs_compilation.cpp.o:
+	cd /home/percy/robot_ws/EE3100704/cmake-build-debug && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/kinova.dir/build.make examples/CMakeFiles/kinova.dir/kinova_autogen/mocs_compilation.cpp.o
+.PHONY : kinova_autogen/mocs_compilation.cpp.o
+
+kinova_autogen/mocs_compilation.i: kinova_autogen/mocs_compilation.cpp.i
+.PHONY : kinova_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+kinova_autogen/mocs_compilation.cpp.i:
+	cd /home/percy/robot_ws/EE3100704/cmake-build-debug && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/kinova.dir/build.make examples/CMakeFiles/kinova.dir/kinova_autogen/mocs_compilation.cpp.i
+.PHONY : kinova_autogen/mocs_compilation.cpp.i
+
+kinova_autogen/mocs_compilation.s: kinova_autogen/mocs_compilation.cpp.s
+.PHONY : kinova_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+kinova_autogen/mocs_compilation.cpp.s:
+	cd /home/percy/robot_ws/EE3100704/cmake-build-debug && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/kinova.dir/build.make examples/CMakeFiles/kinova.dir/kinova_autogen/mocs_compilation.cpp.s
+.PHONY : kinova_autogen/mocs_compilation.cpp.s
+
+robot_autogen/mocs_compilation.o: robot_autogen/mocs_compilation.cpp.o
+.PHONY : robot_autogen/mocs_compilation.o
+
+# target to build an object file
+robot_autogen/mocs_compilation.cpp.o:
+	cd /home/percy/robot_ws/EE3100704/cmake-build-debug && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/robot.dir/build.make examples/CMakeFiles/robot.dir/robot_autogen/mocs_compilation.cpp.o
+.PHONY : robot_autogen/mocs_compilation.cpp.o
+
+robot_autogen/mocs_compilation.i: robot_autogen/mocs_compilation.cpp.i
+.PHONY : robot_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+robot_autogen/mocs_compilation.cpp.i:
+	cd /home/percy/robot_ws/EE3100704/cmake-build-debug && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/robot.dir/build.make examples/CMakeFiles/robot.dir/robot_autogen/mocs_compilation.cpp.i
+.PHONY : robot_autogen/mocs_compilation.cpp.i
+
+robot_autogen/mocs_compilation.s: robot_autogen/mocs_compilation.cpp.s
+.PHONY : robot_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+robot_autogen/mocs_compilation.cpp.s:
+	cd /home/percy/robot_ws/EE3100704/cmake-build-debug && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/robot.dir/build.make examples/CMakeFiles/robot.dir/robot_autogen/mocs_compilation.cpp.s
+.PHONY : robot_autogen/mocs_compilation.cpp.s
+
 src/canine.o: src/canine.cpp.o
 .PHONY : src/canine.o
 
@@ -350,6 +509,30 @@ src/robot.cpp.s:
 	cd /home/percy/robot_ws/EE3100704/cmake-build-debug && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/robot.dir/build.make examples/CMakeFiles/robot.dir/src/robot.cpp.s
 .PHONY : src/robot.cpp.s
 
+src/robot_UI/robot_ui/mainwindow.o: src/robot_UI/robot_ui/mainwindow.cpp.o
+.PHONY : src/robot_UI/robot_ui/mainwindow.o
+
+# target to build an object file
+src/robot_UI/robot_ui/mainwindow.cpp.o:
+	cd /home/percy/robot_ws/EE3100704/cmake-build-debug && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/canine.dir/build.make examples/CMakeFiles/canine.dir/src/robot_UI/robot_ui/mainwindow.cpp.o
+.PHONY : src/robot_UI/robot_ui/mainwindow.cpp.o
+
+src/robot_UI/robot_ui/mainwindow.i: src/robot_UI/robot_ui/mainwindow.cpp.i
+.PHONY : src/robot_UI/robot_ui/mainwindow.i
+
+# target to preprocess a source file
+src/robot_UI/robot_ui/mainwindow.cpp.i:
+	cd /home/percy/robot_ws/EE3100704/cmake-build-debug && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/canine.dir/build.make examples/CMakeFiles/canine.dir/src/robot_UI/robot_ui/mainwindow.cpp.i
+.PHONY : src/robot_UI/robot_ui/mainwindow.cpp.i
+
+src/robot_UI/robot_ui/mainwindow.s: src/robot_UI/robot_ui/mainwindow.cpp.s
+.PHONY : src/robot_UI/robot_ui/mainwindow.s
+
+# target to generate assembly for a file
+src/robot_UI/robot_ui/mainwindow.cpp.s:
+	cd /home/percy/robot_ws/EE3100704/cmake-build-debug && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/canine.dir/build.make examples/CMakeFiles/canine.dir/src/robot_UI/robot_ui/mainwindow.cpp.s
+.PHONY : src/robot_UI/robot_ui/mainwindow.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -357,7 +540,14 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... canine_autogen"
+	@echo "... kinova_autogen"
+	@echo "... robot_autogen"
 	@echo "... canine"
 	@echo "... kinova"
 	@echo "... robot"
@@ -373,6 +563,15 @@ help:
 	@echo "... __/tools/src/setTime.o"
 	@echo "... __/tools/src/setTime.i"
 	@echo "... __/tools/src/setTime.s"
+	@echo "... canine_autogen/mocs_compilation.o"
+	@echo "... canine_autogen/mocs_compilation.i"
+	@echo "... canine_autogen/mocs_compilation.s"
+	@echo "... kinova_autogen/mocs_compilation.o"
+	@echo "... kinova_autogen/mocs_compilation.i"
+	@echo "... kinova_autogen/mocs_compilation.s"
+	@echo "... robot_autogen/mocs_compilation.o"
+	@echo "... robot_autogen/mocs_compilation.i"
+	@echo "... robot_autogen/mocs_compilation.s"
 	@echo "... src/canine.o"
 	@echo "... src/canine.i"
 	@echo "... src/canine.s"
@@ -382,6 +581,9 @@ help:
 	@echo "... src/robot.o"
 	@echo "... src/robot.i"
 	@echo "... src/robot.s"
+	@echo "... src/robot_UI/robot_ui/mainwindow.o"
+	@echo "... src/robot_UI/robot_ui/mainwindow.i"
+	@echo "... src/robot_UI/robot_ui/mainwindow.s"
 .PHONY : help
 
 

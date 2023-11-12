@@ -69,10 +69,24 @@ include examples/CMakeFiles/robot.dir/progress.make
 # Include the compile flags for this target's objects.
 include examples/CMakeFiles/robot.dir/flags.make
 
+examples/CMakeFiles/robot.dir/robot_autogen/mocs_compilation.cpp.o: examples/CMakeFiles/robot.dir/flags.make
+examples/CMakeFiles/robot.dir/robot_autogen/mocs_compilation.cpp.o: examples/robot_autogen/mocs_compilation.cpp
+examples/CMakeFiles/robot.dir/robot_autogen/mocs_compilation.cpp.o: examples/CMakeFiles/robot.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/percy/robot_ws/EE3100704/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/CMakeFiles/robot.dir/robot_autogen/mocs_compilation.cpp.o"
+	cd /home/percy/robot_ws/EE3100704/cmake-build-debug/examples && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/CMakeFiles/robot.dir/robot_autogen/mocs_compilation.cpp.o -MF CMakeFiles/robot.dir/robot_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/robot.dir/robot_autogen/mocs_compilation.cpp.o -c /home/percy/robot_ws/EE3100704/cmake-build-debug/examples/robot_autogen/mocs_compilation.cpp
+
+examples/CMakeFiles/robot.dir/robot_autogen/mocs_compilation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robot.dir/robot_autogen/mocs_compilation.cpp.i"
+	cd /home/percy/robot_ws/EE3100704/cmake-build-debug/examples && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/percy/robot_ws/EE3100704/cmake-build-debug/examples/robot_autogen/mocs_compilation.cpp > CMakeFiles/robot.dir/robot_autogen/mocs_compilation.cpp.i
+
+examples/CMakeFiles/robot.dir/robot_autogen/mocs_compilation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robot.dir/robot_autogen/mocs_compilation.cpp.s"
+	cd /home/percy/robot_ws/EE3100704/cmake-build-debug/examples && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/percy/robot_ws/EE3100704/cmake-build-debug/examples/robot_autogen/mocs_compilation.cpp -o CMakeFiles/robot.dir/robot_autogen/mocs_compilation.cpp.s
+
 examples/CMakeFiles/robot.dir/src/robot.cpp.o: examples/CMakeFiles/robot.dir/flags.make
 examples/CMakeFiles/robot.dir/src/robot.cpp.o: /home/percy/robot_ws/EE3100704/examples/src/robot.cpp
 examples/CMakeFiles/robot.dir/src/robot.cpp.o: examples/CMakeFiles/robot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/percy/robot_ws/EE3100704/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/CMakeFiles/robot.dir/src/robot.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/percy/robot_ws/EE3100704/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object examples/CMakeFiles/robot.dir/src/robot.cpp.o"
 	cd /home/percy/robot_ws/EE3100704/cmake-build-debug/examples && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/CMakeFiles/robot.dir/src/robot.cpp.o -MF CMakeFiles/robot.dir/src/robot.cpp.o.d -o CMakeFiles/robot.dir/src/robot.cpp.o -c /home/percy/robot_ws/EE3100704/examples/src/robot.cpp
 
 examples/CMakeFiles/robot.dir/src/robot.cpp.i: cmake_force
@@ -86,7 +100,7 @@ examples/CMakeFiles/robot.dir/src/robot.cpp.s: cmake_force
 examples/CMakeFiles/robot.dir/__/tools/src/cubicTrajectoryGenerator.cpp.o: examples/CMakeFiles/robot.dir/flags.make
 examples/CMakeFiles/robot.dir/__/tools/src/cubicTrajectoryGenerator.cpp.o: /home/percy/robot_ws/EE3100704/tools/src/cubicTrajectoryGenerator.cpp
 examples/CMakeFiles/robot.dir/__/tools/src/cubicTrajectoryGenerator.cpp.o: examples/CMakeFiles/robot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/percy/robot_ws/EE3100704/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object examples/CMakeFiles/robot.dir/__/tools/src/cubicTrajectoryGenerator.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/percy/robot_ws/EE3100704/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object examples/CMakeFiles/robot.dir/__/tools/src/cubicTrajectoryGenerator.cpp.o"
 	cd /home/percy/robot_ws/EE3100704/cmake-build-debug/examples && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/CMakeFiles/robot.dir/__/tools/src/cubicTrajectoryGenerator.cpp.o -MF CMakeFiles/robot.dir/__/tools/src/cubicTrajectoryGenerator.cpp.o.d -o CMakeFiles/robot.dir/__/tools/src/cubicTrajectoryGenerator.cpp.o -c /home/percy/robot_ws/EE3100704/tools/src/cubicTrajectoryGenerator.cpp
 
 examples/CMakeFiles/robot.dir/__/tools/src/cubicTrajectoryGenerator.cpp.i: cmake_force
@@ -100,7 +114,7 @@ examples/CMakeFiles/robot.dir/__/tools/src/cubicTrajectoryGenerator.cpp.s: cmake
 examples/CMakeFiles/robot.dir/__/tools/src/robotController.cpp.o: examples/CMakeFiles/robot.dir/flags.make
 examples/CMakeFiles/robot.dir/__/tools/src/robotController.cpp.o: /home/percy/robot_ws/EE3100704/tools/src/robotController.cpp
 examples/CMakeFiles/robot.dir/__/tools/src/robotController.cpp.o: examples/CMakeFiles/robot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/percy/robot_ws/EE3100704/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object examples/CMakeFiles/robot.dir/__/tools/src/robotController.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/percy/robot_ws/EE3100704/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object examples/CMakeFiles/robot.dir/__/tools/src/robotController.cpp.o"
 	cd /home/percy/robot_ws/EE3100704/cmake-build-debug/examples && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/CMakeFiles/robot.dir/__/tools/src/robotController.cpp.o -MF CMakeFiles/robot.dir/__/tools/src/robotController.cpp.o.d -o CMakeFiles/robot.dir/__/tools/src/robotController.cpp.o -c /home/percy/robot_ws/EE3100704/tools/src/robotController.cpp
 
 examples/CMakeFiles/robot.dir/__/tools/src/robotController.cpp.i: cmake_force
@@ -114,7 +128,7 @@ examples/CMakeFiles/robot.dir/__/tools/src/robotController.cpp.s: cmake_force
 examples/CMakeFiles/robot.dir/__/tools/src/setTime.cpp.o: examples/CMakeFiles/robot.dir/flags.make
 examples/CMakeFiles/robot.dir/__/tools/src/setTime.cpp.o: /home/percy/robot_ws/EE3100704/tools/src/setTime.cpp
 examples/CMakeFiles/robot.dir/__/tools/src/setTime.cpp.o: examples/CMakeFiles/robot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/percy/robot_ws/EE3100704/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object examples/CMakeFiles/robot.dir/__/tools/src/setTime.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/percy/robot_ws/EE3100704/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object examples/CMakeFiles/robot.dir/__/tools/src/setTime.cpp.o"
 	cd /home/percy/robot_ws/EE3100704/cmake-build-debug/examples && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/CMakeFiles/robot.dir/__/tools/src/setTime.cpp.o -MF CMakeFiles/robot.dir/__/tools/src/setTime.cpp.o.d -o CMakeFiles/robot.dir/__/tools/src/setTime.cpp.o -c /home/percy/robot_ws/EE3100704/tools/src/setTime.cpp
 
 examples/CMakeFiles/robot.dir/__/tools/src/setTime.cpp.i: cmake_force
@@ -128,7 +142,7 @@ examples/CMakeFiles/robot.dir/__/tools/src/setTime.cpp.s: cmake_force
 examples/CMakeFiles/robot.dir/__/tools/src/setObstacle.cpp.o: examples/CMakeFiles/robot.dir/flags.make
 examples/CMakeFiles/robot.dir/__/tools/src/setObstacle.cpp.o: /home/percy/robot_ws/EE3100704/tools/src/setObstacle.cpp
 examples/CMakeFiles/robot.dir/__/tools/src/setObstacle.cpp.o: examples/CMakeFiles/robot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/percy/robot_ws/EE3100704/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object examples/CMakeFiles/robot.dir/__/tools/src/setObstacle.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/percy/robot_ws/EE3100704/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object examples/CMakeFiles/robot.dir/__/tools/src/setObstacle.cpp.o"
 	cd /home/percy/robot_ws/EE3100704/cmake-build-debug/examples && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/CMakeFiles/robot.dir/__/tools/src/setObstacle.cpp.o -MF CMakeFiles/robot.dir/__/tools/src/setObstacle.cpp.o.d -o CMakeFiles/robot.dir/__/tools/src/setObstacle.cpp.o -c /home/percy/robot_ws/EE3100704/tools/src/setObstacle.cpp
 
 examples/CMakeFiles/robot.dir/__/tools/src/setObstacle.cpp.i: cmake_force
@@ -141,6 +155,7 @@ examples/CMakeFiles/robot.dir/__/tools/src/setObstacle.cpp.s: cmake_force
 
 # Object files for target robot
 robot_OBJECTS = \
+"CMakeFiles/robot.dir/robot_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/robot.dir/src/robot.cpp.o" \
 "CMakeFiles/robot.dir/__/tools/src/cubicTrajectoryGenerator.cpp.o" \
 "CMakeFiles/robot.dir/__/tools/src/robotController.cpp.o" \
@@ -150,6 +165,7 @@ robot_OBJECTS = \
 # External object files for target robot
 robot_EXTERNAL_OBJECTS =
 
+examples/robot: examples/CMakeFiles/robot.dir/robot_autogen/mocs_compilation.cpp.o
 examples/robot: examples/CMakeFiles/robot.dir/src/robot.cpp.o
 examples/robot: examples/CMakeFiles/robot.dir/__/tools/src/cubicTrajectoryGenerator.cpp.o
 examples/robot: examples/CMakeFiles/robot.dir/__/tools/src/robotController.cpp.o
@@ -157,7 +173,7 @@ examples/robot: examples/CMakeFiles/robot.dir/__/tools/src/setTime.cpp.o
 examples/robot: examples/CMakeFiles/robot.dir/__/tools/src/setObstacle.cpp.o
 examples/robot: examples/CMakeFiles/robot.dir/build.make
 examples/robot: examples/CMakeFiles/robot.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/percy/robot_ws/EE3100704/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable robot"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/percy/robot_ws/EE3100704/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable robot"
 	cd /home/percy/robot_ws/EE3100704/cmake-build-debug/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/robot.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

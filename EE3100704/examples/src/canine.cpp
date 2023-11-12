@@ -1,4 +1,6 @@
 #include "../include/canine.h"
+#include "robot_UI/robot_ui//mainwindow.h"
+#include <QApplication>
 
 int main (int argc, char* argv[]) {
     auto binaryPath = raisim::Path::setFromArgv(argv[0]);
@@ -6,6 +8,10 @@ int main (int argc, char* argv[]) {
     // create raisim world
     raisim::World world;
     world.setTimeStep(0.001);
+
+    QApplication a(argc, argv);
+    MainWindow w;
+    w.show();
 
     // create objects
     auto ground = world.addGround();
@@ -74,5 +80,7 @@ int main (int argc, char* argv[]) {
     }
 
     server.killServer();
+
+    return a.exec();
 
 }

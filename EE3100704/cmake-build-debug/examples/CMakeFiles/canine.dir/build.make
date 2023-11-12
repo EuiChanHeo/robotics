@@ -69,10 +69,24 @@ include examples/CMakeFiles/canine.dir/progress.make
 # Include the compile flags for this target's objects.
 include examples/CMakeFiles/canine.dir/flags.make
 
+examples/CMakeFiles/canine.dir/canine_autogen/mocs_compilation.cpp.o: examples/CMakeFiles/canine.dir/flags.make
+examples/CMakeFiles/canine.dir/canine_autogen/mocs_compilation.cpp.o: examples/canine_autogen/mocs_compilation.cpp
+examples/CMakeFiles/canine.dir/canine_autogen/mocs_compilation.cpp.o: examples/CMakeFiles/canine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/percy/robot_ws/EE3100704/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/CMakeFiles/canine.dir/canine_autogen/mocs_compilation.cpp.o"
+	cd /home/percy/robot_ws/EE3100704/cmake-build-debug/examples && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/CMakeFiles/canine.dir/canine_autogen/mocs_compilation.cpp.o -MF CMakeFiles/canine.dir/canine_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/canine.dir/canine_autogen/mocs_compilation.cpp.o -c /home/percy/robot_ws/EE3100704/cmake-build-debug/examples/canine_autogen/mocs_compilation.cpp
+
+examples/CMakeFiles/canine.dir/canine_autogen/mocs_compilation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/canine.dir/canine_autogen/mocs_compilation.cpp.i"
+	cd /home/percy/robot_ws/EE3100704/cmake-build-debug/examples && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/percy/robot_ws/EE3100704/cmake-build-debug/examples/canine_autogen/mocs_compilation.cpp > CMakeFiles/canine.dir/canine_autogen/mocs_compilation.cpp.i
+
+examples/CMakeFiles/canine.dir/canine_autogen/mocs_compilation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/canine.dir/canine_autogen/mocs_compilation.cpp.s"
+	cd /home/percy/robot_ws/EE3100704/cmake-build-debug/examples && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/percy/robot_ws/EE3100704/cmake-build-debug/examples/canine_autogen/mocs_compilation.cpp -o CMakeFiles/canine.dir/canine_autogen/mocs_compilation.cpp.s
+
 examples/CMakeFiles/canine.dir/src/canine.cpp.o: examples/CMakeFiles/canine.dir/flags.make
 examples/CMakeFiles/canine.dir/src/canine.cpp.o: /home/percy/robot_ws/EE3100704/examples/src/canine.cpp
 examples/CMakeFiles/canine.dir/src/canine.cpp.o: examples/CMakeFiles/canine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/percy/robot_ws/EE3100704/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/CMakeFiles/canine.dir/src/canine.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/percy/robot_ws/EE3100704/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object examples/CMakeFiles/canine.dir/src/canine.cpp.o"
 	cd /home/percy/robot_ws/EE3100704/cmake-build-debug/examples && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/CMakeFiles/canine.dir/src/canine.cpp.o -MF CMakeFiles/canine.dir/src/canine.cpp.o.d -o CMakeFiles/canine.dir/src/canine.cpp.o -c /home/percy/robot_ws/EE3100704/examples/src/canine.cpp
 
 examples/CMakeFiles/canine.dir/src/canine.cpp.i: cmake_force
@@ -86,7 +100,7 @@ examples/CMakeFiles/canine.dir/src/canine.cpp.s: cmake_force
 examples/CMakeFiles/canine.dir/__/tools/src/cubicTrajectoryGenerator.cpp.o: examples/CMakeFiles/canine.dir/flags.make
 examples/CMakeFiles/canine.dir/__/tools/src/cubicTrajectoryGenerator.cpp.o: /home/percy/robot_ws/EE3100704/tools/src/cubicTrajectoryGenerator.cpp
 examples/CMakeFiles/canine.dir/__/tools/src/cubicTrajectoryGenerator.cpp.o: examples/CMakeFiles/canine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/percy/robot_ws/EE3100704/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object examples/CMakeFiles/canine.dir/__/tools/src/cubicTrajectoryGenerator.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/percy/robot_ws/EE3100704/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object examples/CMakeFiles/canine.dir/__/tools/src/cubicTrajectoryGenerator.cpp.o"
 	cd /home/percy/robot_ws/EE3100704/cmake-build-debug/examples && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/CMakeFiles/canine.dir/__/tools/src/cubicTrajectoryGenerator.cpp.o -MF CMakeFiles/canine.dir/__/tools/src/cubicTrajectoryGenerator.cpp.o.d -o CMakeFiles/canine.dir/__/tools/src/cubicTrajectoryGenerator.cpp.o -c /home/percy/robot_ws/EE3100704/tools/src/cubicTrajectoryGenerator.cpp
 
 examples/CMakeFiles/canine.dir/__/tools/src/cubicTrajectoryGenerator.cpp.i: cmake_force
@@ -100,7 +114,7 @@ examples/CMakeFiles/canine.dir/__/tools/src/cubicTrajectoryGenerator.cpp.s: cmak
 examples/CMakeFiles/canine.dir/__/tools/src/robotController.cpp.o: examples/CMakeFiles/canine.dir/flags.make
 examples/CMakeFiles/canine.dir/__/tools/src/robotController.cpp.o: /home/percy/robot_ws/EE3100704/tools/src/robotController.cpp
 examples/CMakeFiles/canine.dir/__/tools/src/robotController.cpp.o: examples/CMakeFiles/canine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/percy/robot_ws/EE3100704/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object examples/CMakeFiles/canine.dir/__/tools/src/robotController.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/percy/robot_ws/EE3100704/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object examples/CMakeFiles/canine.dir/__/tools/src/robotController.cpp.o"
 	cd /home/percy/robot_ws/EE3100704/cmake-build-debug/examples && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/CMakeFiles/canine.dir/__/tools/src/robotController.cpp.o -MF CMakeFiles/canine.dir/__/tools/src/robotController.cpp.o.d -o CMakeFiles/canine.dir/__/tools/src/robotController.cpp.o -c /home/percy/robot_ws/EE3100704/tools/src/robotController.cpp
 
 examples/CMakeFiles/canine.dir/__/tools/src/robotController.cpp.i: cmake_force
@@ -114,7 +128,7 @@ examples/CMakeFiles/canine.dir/__/tools/src/robotController.cpp.s: cmake_force
 examples/CMakeFiles/canine.dir/__/tools/src/setTime.cpp.o: examples/CMakeFiles/canine.dir/flags.make
 examples/CMakeFiles/canine.dir/__/tools/src/setTime.cpp.o: /home/percy/robot_ws/EE3100704/tools/src/setTime.cpp
 examples/CMakeFiles/canine.dir/__/tools/src/setTime.cpp.o: examples/CMakeFiles/canine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/percy/robot_ws/EE3100704/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object examples/CMakeFiles/canine.dir/__/tools/src/setTime.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/percy/robot_ws/EE3100704/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object examples/CMakeFiles/canine.dir/__/tools/src/setTime.cpp.o"
 	cd /home/percy/robot_ws/EE3100704/cmake-build-debug/examples && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/CMakeFiles/canine.dir/__/tools/src/setTime.cpp.o -MF CMakeFiles/canine.dir/__/tools/src/setTime.cpp.o.d -o CMakeFiles/canine.dir/__/tools/src/setTime.cpp.o -c /home/percy/robot_ws/EE3100704/tools/src/setTime.cpp
 
 examples/CMakeFiles/canine.dir/__/tools/src/setTime.cpp.i: cmake_force
@@ -128,7 +142,7 @@ examples/CMakeFiles/canine.dir/__/tools/src/setTime.cpp.s: cmake_force
 examples/CMakeFiles/canine.dir/__/tools/src/setObstacle.cpp.o: examples/CMakeFiles/canine.dir/flags.make
 examples/CMakeFiles/canine.dir/__/tools/src/setObstacle.cpp.o: /home/percy/robot_ws/EE3100704/tools/src/setObstacle.cpp
 examples/CMakeFiles/canine.dir/__/tools/src/setObstacle.cpp.o: examples/CMakeFiles/canine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/percy/robot_ws/EE3100704/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object examples/CMakeFiles/canine.dir/__/tools/src/setObstacle.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/percy/robot_ws/EE3100704/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object examples/CMakeFiles/canine.dir/__/tools/src/setObstacle.cpp.o"
 	cd /home/percy/robot_ws/EE3100704/cmake-build-debug/examples && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/CMakeFiles/canine.dir/__/tools/src/setObstacle.cpp.o -MF CMakeFiles/canine.dir/__/tools/src/setObstacle.cpp.o.d -o CMakeFiles/canine.dir/__/tools/src/setObstacle.cpp.o -c /home/percy/robot_ws/EE3100704/tools/src/setObstacle.cpp
 
 examples/CMakeFiles/canine.dir/__/tools/src/setObstacle.cpp.i: cmake_force
@@ -139,25 +153,49 @@ examples/CMakeFiles/canine.dir/__/tools/src/setObstacle.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/canine.dir/__/tools/src/setObstacle.cpp.s"
 	cd /home/percy/robot_ws/EE3100704/cmake-build-debug/examples && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/percy/robot_ws/EE3100704/tools/src/setObstacle.cpp -o CMakeFiles/canine.dir/__/tools/src/setObstacle.cpp.s
 
+examples/CMakeFiles/canine.dir/src/robot_UI/robot_ui/mainwindow.cpp.o: examples/CMakeFiles/canine.dir/flags.make
+examples/CMakeFiles/canine.dir/src/robot_UI/robot_ui/mainwindow.cpp.o: /home/percy/robot_ws/EE3100704/examples/src/robot_UI/robot_ui/mainwindow.cpp
+examples/CMakeFiles/canine.dir/src/robot_UI/robot_ui/mainwindow.cpp.o: examples/CMakeFiles/canine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/percy/robot_ws/EE3100704/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object examples/CMakeFiles/canine.dir/src/robot_UI/robot_ui/mainwindow.cpp.o"
+	cd /home/percy/robot_ws/EE3100704/cmake-build-debug/examples && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/CMakeFiles/canine.dir/src/robot_UI/robot_ui/mainwindow.cpp.o -MF CMakeFiles/canine.dir/src/robot_UI/robot_ui/mainwindow.cpp.o.d -o CMakeFiles/canine.dir/src/robot_UI/robot_ui/mainwindow.cpp.o -c /home/percy/robot_ws/EE3100704/examples/src/robot_UI/robot_ui/mainwindow.cpp
+
+examples/CMakeFiles/canine.dir/src/robot_UI/robot_ui/mainwindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/canine.dir/src/robot_UI/robot_ui/mainwindow.cpp.i"
+	cd /home/percy/robot_ws/EE3100704/cmake-build-debug/examples && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/percy/robot_ws/EE3100704/examples/src/robot_UI/robot_ui/mainwindow.cpp > CMakeFiles/canine.dir/src/robot_UI/robot_ui/mainwindow.cpp.i
+
+examples/CMakeFiles/canine.dir/src/robot_UI/robot_ui/mainwindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/canine.dir/src/robot_UI/robot_ui/mainwindow.cpp.s"
+	cd /home/percy/robot_ws/EE3100704/cmake-build-debug/examples && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/percy/robot_ws/EE3100704/examples/src/robot_UI/robot_ui/mainwindow.cpp -o CMakeFiles/canine.dir/src/robot_UI/robot_ui/mainwindow.cpp.s
+
 # Object files for target canine
 canine_OBJECTS = \
+"CMakeFiles/canine.dir/canine_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/canine.dir/src/canine.cpp.o" \
 "CMakeFiles/canine.dir/__/tools/src/cubicTrajectoryGenerator.cpp.o" \
 "CMakeFiles/canine.dir/__/tools/src/robotController.cpp.o" \
 "CMakeFiles/canine.dir/__/tools/src/setTime.cpp.o" \
-"CMakeFiles/canine.dir/__/tools/src/setObstacle.cpp.o"
+"CMakeFiles/canine.dir/__/tools/src/setObstacle.cpp.o" \
+"CMakeFiles/canine.dir/src/robot_UI/robot_ui/mainwindow.cpp.o"
 
 # External object files for target canine
 canine_EXTERNAL_OBJECTS =
 
+examples/canine: examples/CMakeFiles/canine.dir/canine_autogen/mocs_compilation.cpp.o
 examples/canine: examples/CMakeFiles/canine.dir/src/canine.cpp.o
 examples/canine: examples/CMakeFiles/canine.dir/__/tools/src/cubicTrajectoryGenerator.cpp.o
 examples/canine: examples/CMakeFiles/canine.dir/__/tools/src/robotController.cpp.o
 examples/canine: examples/CMakeFiles/canine.dir/__/tools/src/setTime.cpp.o
 examples/canine: examples/CMakeFiles/canine.dir/__/tools/src/setObstacle.cpp.o
+examples/canine: examples/CMakeFiles/canine.dir/src/robot_UI/robot_ui/mainwindow.cpp.o
 examples/canine: examples/CMakeFiles/canine.dir/build.make
+examples/canine: /usr/lib/x86_64-linux-gnu/libQt5Quick.so.5.12.8
+examples/canine: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8
+examples/canine: /usr/lib/x86_64-linux-gnu/libQt5Qml.so.5.12.8
+examples/canine: /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.12.8
+examples/canine: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8
+examples/canine: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8
 examples/canine: examples/CMakeFiles/canine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/percy/robot_ws/EE3100704/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable canine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/percy/robot_ws/EE3100704/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable canine"
 	cd /home/percy/robot_ws/EE3100704/cmake-build-debug/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/canine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -10,6 +10,7 @@
 					[
 						1
 					],
+					"hasInstallRule" : true,
 					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
@@ -20,7 +21,8 @@
 				},
 				{
 					"build" : "examples",
-					"jsonFile" : "directory-examples-Debug-1c8b83b621b6ef38a245.json",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-examples-Debug-0b0de611c7ababcc9163.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.5"
@@ -32,7 +34,10 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3,
+						4,
+						5
 					]
 				}
 			],
@@ -61,7 +66,10 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3,
+						4,
+						5
 					]
 				}
 			],
@@ -70,22 +78,43 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "canine::@714eac15f71a94114fdf",
-					"jsonFile" : "target-canine-Debug-92e2e18855c130128b5b.json",
+					"jsonFile" : "target-canine-Debug-663225aa83897ae26ae4.json",
 					"name" : "canine",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 1,
+					"id" : "canine_autogen::@714eac15f71a94114fdf",
+					"jsonFile" : "target-canine_autogen-Debug-b92a5892f960b3d49477.json",
+					"name" : "canine_autogen",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
 					"id" : "kinova::@714eac15f71a94114fdf",
-					"jsonFile" : "target-kinova-Debug-7115d635481bacbd262d.json",
+					"jsonFile" : "target-kinova-Debug-4bca4c8d9fb96a06b32e.json",
 					"name" : "kinova",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 1,
+					"id" : "kinova_autogen::@714eac15f71a94114fdf",
+					"jsonFile" : "target-kinova_autogen-Debug-723635fbaf0602f4eb21.json",
+					"name" : "kinova_autogen",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
 					"id" : "robot::@714eac15f71a94114fdf",
-					"jsonFile" : "target-robot-Debug-a639ada56d00232fbf67.json",
+					"jsonFile" : "target-robot-Debug-4bbd4fe30301ef79564a.json",
 					"name" : "robot",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "robot_autogen::@714eac15f71a94114fdf",
+					"jsonFile" : "target-robot_autogen-Debug-5b5c79903cd0b7f9633e.json",
+					"name" : "robot_autogen",
 					"projectIndex" : 1
 				}
 			]

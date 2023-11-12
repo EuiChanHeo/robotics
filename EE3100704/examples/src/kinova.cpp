@@ -1,12 +1,4 @@
-//
-// Created by jy on 23. 11. 1.
-//
-
-#include "raisim/RaisimServer.hpp"
-#include "raisim/World.hpp"
-#include "cubicTrajectoryGenerator.hpp"
-#include "robotController.hpp"
-#include "setObstacle.hpp"
+#include "../include/kinova.h"
 
 int main(int argc, char* argv[]) {
     auto binaryPath = raisim::Path::setFromArgv(argv[0]);

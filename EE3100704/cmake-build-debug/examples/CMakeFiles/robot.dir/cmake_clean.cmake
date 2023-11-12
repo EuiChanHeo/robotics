@@ -1,4 +1,7 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/robot_autogen.dir/AutogenUsed.txt"
+  "CMakeFiles/robot_autogen.dir/ParseCache.txt"
+  "robot_autogen"
   "CMakeFiles/robot.dir/__/tools/src/cubicTrajectoryGenerator.cpp.o"
   "CMakeFiles/robot.dir/__/tools/src/cubicTrajectoryGenerator.cpp.o.d"
   "CMakeFiles/robot.dir/__/tools/src/robotController.cpp.o"
@@ -7,6 +10,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/robot.dir/__/tools/src/setObstacle.cpp.o.d"
   "CMakeFiles/robot.dir/__/tools/src/setTime.cpp.o"
   "CMakeFiles/robot.dir/__/tools/src/setTime.cpp.o.d"
+  "CMakeFiles/robot.dir/robot_autogen/mocs_compilation.cpp.o"
+  "CMakeFiles/robot.dir/robot_autogen/mocs_compilation.cpp.o.d"
   "CMakeFiles/robot.dir/src/robot.cpp.o"
   "CMakeFiles/robot.dir/src/robot.cpp.o.d"
   "robot"
