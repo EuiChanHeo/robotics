@@ -1,7 +1,12 @@
 #include "../include/canine.h"
-#include "robot_UI/robot_ui//mainwindow.h"
-#include <QApplication>
-#include <QThread>
+
+pSHM sharedMemory;
+
+void Canine::RunSimul()
+{
+
+}
+
 
 void Canine::RunPart()
 {
@@ -20,7 +25,6 @@ void Canine::RunPart()
     server.launchServer();
     canine->setName("canine");
 
-
     // set obstacle
     setObstacle setObstacle;
 
@@ -29,11 +33,14 @@ void Canine::RunPart()
 
     // set joint Initialization
     Eigen::VectorXd initialJointPosition(canine->getGeneralizedCoordinateDim()), jointVelocityTarget(canine->getDOF());
-    initialJointPosition << 0, 0, 0.07, 1, 0, 0, 0, 0.0872664, 2.17643, -2.76635, -0.0872664, 2.1869, -2.75587, 0.0837758, 2.17992, -2.73, -0.0837758, 2.18166, -2.73;
+//    initialJointPosition << sharedMemory->init_x, sharedMemory->init_y, sharedMemory->init_z, sharedMemory->init_w, sharedMemory->init_i, sharedMemory->init_j, sharedMemory->init_k, sharedMemory->init_angle_1, sharedMemory->init_angle_2, sharedMemory->init_angle_3, sharedMemory->init_angle_4, sharedMemory->init_angle_5, sharedMemory->init_angle_6, sharedMemory->init_angle_7, sharedMemory->init_angle_8, sharedMemory->init_angle_9, sharedMemory->init_angle_10, sharedMemory->init_angle_11, sharedMemory->init_angle_12;
+    initialJointPosition << 0,0,0.075,1,0,0,0,0.0872664,2.17643,-2.76635,-0.0872664,2.1869,2.75587,0.0837758,2.17992,2.73,-0.0837758,2.17992,-2.73;
     jointVelocityTarget.setZero();
 
     Eigen::VectorXd jointPgain(canine->getDOF()), jointDgain(canine->getDOF());
     jointPgain.tail(12).setConstant(100.0);
+//    jointPgain.tail(12).setConstant(50.0);
+//    jointDgain.tail(12).setConstant(1.5);
     jointDgain.tail(12).setConstant(1.0);
     sleep(1);
 
@@ -48,26 +55,25 @@ void Canine::RunPart()
 
     // set controller
     robotController controller;
-
     controller.setPDgain(jointPgain,jointDgain);
     controller.setStand(&world, canine);
-    controller.setSit(&world, canine);
+//    controller.setSit(&world, canine);
     // make trajectory and run
-    char run;
-    while (1)
-    {
-        std::cout << "\nDo you want to keep going? [y/n]  ";
-        std::cin >> run;
-        if (run == 'y')
-        {
-            controller.setFloatingBasePosition(&world, canine,timeDuration);
-        }
-        else
-        {
-            std::cout << "Bye. Please quit. " << std::endl;
-            break;
-        }
-    }
+//    char run;
+//    while (1)
+//    {
+//        std::cout << "\nDo you want to keep going? [y/n]  ";
+//        std::cin >> run;
+//        if (run == 'y')
+//        {
+//            controller.setFloatingBasePosition(&world, canine,timeDuration);
+//        }
+//        else
+//        {
+//            std::cout << "Bye. Please quit. " << std::endl;
+//            break;
+//        }
+//    }
 
     for (int i=0; i<2000000; i++)
     {

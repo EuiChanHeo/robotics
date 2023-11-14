@@ -201,7 +201,10 @@ void robotController::setStand(raisim::World *world, raisim::ArticulatedSystem *
     }
 
     /// set joint stand position
+//    goalPosition << 0, 0, 0.35, 1, 0, 0, 0, -0.00523599, 0.794125 ,-1.59523,-0.00523599, 0.802851, -1.59872, 0.00698132, 0.724311, -1.4, 0.0174533, 0.731293, -1.4;
+    // x,y,z,w,i,j,k,angle_1~12
     goalPosition << 0, 0, 0.35, 1, 0, 0, 0, -0.00523599, 0.794125 ,-1.59523,-0.00523599, 0.802851, -1.59872, 0.00698132, 0.724311, -1.4, 0.0174533, 0.731293, -1.4;
+    //    goalPosition << 0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0;
 
     /// create trajectory
     for (int i = 0; i < robot->getGeneralizedCoordinateDim(); i++)

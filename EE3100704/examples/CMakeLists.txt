@@ -44,7 +44,6 @@ target_link_libraries(kinova
         pthread
 )
 
-
 add_executable(canine src/canine.cpp
         ../tools/src/cubicTrajectoryGenerator.cpp
         ../tools/src/robotController.cpp
