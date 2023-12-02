@@ -55,13 +55,6 @@ void Canine::RunPart()
 
     controller.setPDgain(jointPgain,jointDgain);
     controller.setStand(&world, canine);
-//    controller.setTrot(&world, canine);
-    controller.setTestMotion(&world, canine);
-    controller.setTestMotion_2(&world, canine);
-    controller.setSit(&world, canine);
-    controller.setStand_2(&world, canine);
-    controller.setDampingMotion(&world, canine);
-    controller.setStand_2(&world, canine);
 
     for (int i=0; i<2000000; i++)
     {
