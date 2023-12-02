@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.5)
 project(EE3100704-examples LANGUAGES CXX)
 
+set( CMAKE_BUILD_TYPE Debug )
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
-
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)

@@ -1,49 +1,46 @@
 #include "../include/canine.h"
 
-pSHM sharedMemory;
+SHM sharedMemory;
+std::chrono::steady_clock::time_point startTime;
 
 void Canine::RunSimul()
 {
-
 }
 
+void Canine::GetDuration(){
+    auto endTime = std::chrono::steady_clock::now();
+    auto elapsedTime = std::chrono::duration_cast<std::chrono::milliseconds>(endTime - startTime);
+    sharedMemory.duration = static_cast<double>(elapsedTime.count());
+}
 
 void Canine::RunPart()
 {
-    // create raisim world
+    startTime = std::chrono::steady_clock::now();
     raisim::World world;
     world.setTimeStep(0.001);
+    world.setGravity({0.0,0.0,-9.81});
 
-    // create objects
     auto ground = world.addGround();
-    // ground->setAppearance("steel");
-    auto canine = world.addArticulatedSystem("/home/percy/robot_ws/EE3100704/examples/rsc/canine/urdf/canineV4_2.urdf"); //set your path
 
-    // launch raisim server
+    auto canine = world.addArticulatedSystem("/home/percy/robot_ws/EE3100704/examples/rsc/canine/urdf/canineV4_2.urdf");
     raisim::RaisimServer server(&world);
     server.focusOn(canine);
     server.launchServer();
     canine->setName("canine");
 
-    // set obstacle
     setObstacle setObstacle;
-
     float radius, mass, x, y, z;
     setObstacle.setSphere(&world, 0.1, 1.0, 1.2, 0, 0.5);
 
     // set joint Initialization
     Eigen::VectorXd initialJointPosition(canine->getGeneralizedCoordinateDim()), jointVelocityTarget(canine->getDOF());
-//    initialJointPosition << sharedMemory->init_x, sharedMemory->init_y, sharedMemory->init_z, sharedMemory->init_w, sharedMemory->init_i, sharedMemory->init_j, sharedMemory->init_k, sharedMemory->init_angle_1, sharedMemory->init_angle_2, sharedMemory->init_angle_3, sharedMemory->init_angle_4, sharedMemory->init_angle_5, sharedMemory->init_angle_6, sharedMemory->init_angle_7, sharedMemory->init_angle_8, sharedMemory->init_angle_9, sharedMemory->init_angle_10, sharedMemory->init_angle_11, sharedMemory->init_angle_12;
-    initialJointPosition << 0,0,0.075,1,0,0,0,0.0872664,2.17643,-2.76635,-0.0872664,2.1869,2.75587,0.0837758,2.17992,2.73,-0.0837758,2.17992,-2.73;
+    initialJointPosition << sharedMemory.init_x, sharedMemory.init_y, sharedMemory.init_z, sharedMemory.init_w, sharedMemory.init_i, sharedMemory.init_j, sharedMemory.init_k, sharedMemory.init_angle_1, sharedMemory.init_angle_2, sharedMemory.init_angle_3, sharedMemory.init_angle_4, sharedMemory.init_angle_5, sharedMemory.init_angle_6, sharedMemory.init_angle_7, sharedMemory.init_angle_8, sharedMemory.init_angle_9, sharedMemory.init_angle_10, sharedMemory.init_angle_11, sharedMemory.init_angle_12;
     jointVelocityTarget.setZero();
 
     Eigen::VectorXd jointPgain(canine->getDOF()), jointDgain(canine->getDOF());
     jointPgain.tail(12).setConstant(100.0);
-//    jointPgain.tail(12).setConstant(50.0);
-//    jointDgain.tail(12).setConstant(1.5);
     jointDgain.tail(12).setConstant(1.0);
     sleep(1);
-
     canine->setGeneralizedCoordinate(initialJointPosition);
     canine->setGeneralizedForce(Eigen::VectorXd::Zero(canine->getDOF()));
     canine->setPdGains(jointPgain, jointDgain);
@@ -53,27 +50,18 @@ void Canine::RunPart()
 
     sleep(2);
 
-    // set controller
     robotController controller;
+
+
     controller.setPDgain(jointPgain,jointDgain);
     controller.setStand(&world, canine);
-//    controller.setSit(&world, canine);
-    // make trajectory and run
-//    char run;
-//    while (1)
-//    {
-//        std::cout << "\nDo you want to keep going? [y/n]  ";
-//        std::cin >> run;
-//        if (run == 'y')
-//        {
-//            controller.setFloatingBasePosition(&world, canine,timeDuration);
-//        }
-//        else
-//        {
-//            std::cout << "Bye. Please quit. " << std::endl;
-//            break;
-//        }
-//    }
+//    controller.setTrot(&world, canine);
+    controller.setTestMotion(&world, canine);
+    controller.setTestMotion_2(&world, canine);
+    controller.setSit(&world, canine);
+    controller.setStand_2(&world, canine);
+    controller.setDampingMotion(&world, canine);
+    controller.setStand_2(&world, canine);
 
     for (int i=0; i<2000000; i++)
     {
@@ -103,6 +91,7 @@ int main (int argc, char* argv[]) {
     MainWindow w;
     CommunicationThread communicationThread;
     communicationThread.start();
+
     w.show();
 
     return a.exec();

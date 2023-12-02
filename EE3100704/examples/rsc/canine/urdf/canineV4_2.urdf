@@ -280,7 +280,7 @@
     <collision>
       <origin xyz="0 -0.084 -0.23" rpy="1.57079632679 0 0"/>
       <geometry>
-        <cylinder length="0.024" radius="0.025"/>
+        <cylinder length="0.024" radius="0.015"/>
       </geometry>
     </collision>
   </link>
@@ -288,7 +288,7 @@
   <link name="HR_calf">
     <inertial>
       <origin xyz="0.002302575792990591 -0.017335752937394422 -0.11753324247330965" rpy="0 0 0"/>
-      <mass value = "0.3639"/>
+      <mass value = "0.4049"/>
       <inertia ixx = "0.00373267" iyy = "0.0037494" izz = "6.52214e-05" ixy = "8.36172e-07" iyz = "2.25766e-05" ixz = "-6.68938e-05"/>
     </inertial>
     <visual>

@@ -11,6 +11,7 @@
 #include "robotController.hpp"
 #include "setObstacle.hpp"
 #include "Variables/SharedMemory.h"
+#include <iostream>
 //#include "/home/percy/robot_ws/EE3100704/examples/include/Variables/SharedMemory.h"
 #include "../src/robot_UI/robot_ui/mainwindow.h"
 #include <QApplication>
@@ -19,10 +20,13 @@
 class Canine{
 
 private:
-
 public:
 
+    void GetDuration();
     void RunSimul();
     void RunPart();
 };
+
+
+
 #endif //EE3100704_PROJECTS_CANINE_H

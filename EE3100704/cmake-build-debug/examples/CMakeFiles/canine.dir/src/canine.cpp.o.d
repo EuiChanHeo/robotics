@@ -614,9 +614,10 @@ examples/CMakeFiles/canine.dir/src/canine.cpp.o: \
  /home/percy/robot_ws/EE3100704/tools/include/robotController.hpp \
  /home/percy/robot_ws/EE3100704/tools/include/setTime.hpp \
  /home/percy/robot_ws/EE3100704/tools/include/cubicTrajectoryGenerator.hpp \
+ /home/percy/robot_ws/EE3100704/examples/include/Variables/SharedMemory.h \
+ /home/percy/robot_ws/EE3100704/examples/include/Variables/Variable.h \
  /home/percy/robot_ws/EE3100704/tools/include/setObstacle.hpp \
  /home/percy/robot_ws/EE3100704/examples/src/../include/Variables/SharedMemory.h \
- /home/percy/robot_ws/EE3100704/examples/src/../include/Variables/Variable.h \
  /home/percy/robot_ws/EE3100704/examples/src/../include/../src/robot_UI/robot_ui/mainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \

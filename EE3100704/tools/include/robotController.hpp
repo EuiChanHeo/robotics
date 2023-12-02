@@ -7,9 +7,9 @@
 
 #include "raisim/World.hpp"
 #include "raisim/RaisimServer.hpp"
-
 #include "setTime.hpp"
 #include "cubicTrajectoryGenerator.hpp"
+#include "/home/percy/robot_ws/EE3100704/examples/include/Variables/SharedMemory.h"
 
 class robotController {
 public:
@@ -17,8 +17,14 @@ public:
     void setPDgain(Eigen::VectorXd Pgain, Eigen::VectorXd Dgain);
     void setFixedBasePosition(raisim::World* world, raisim::ArticulatedSystem* robot, float timeDuration);
     void setFloatingBasePosition(raisim::World* world, raisim::ArticulatedSystem* robot, float timeDuration);
+    void setTestMotion(raisim::World *world, raisim::ArticulatedSystem *robot);
+    void setTestMotion_2(raisim::World *world, raisim::ArticulatedSystem *robot);
     void setStand(raisim::World* world, raisim::ArticulatedSystem* robot);
+    void setStand_2(raisim::World *world, raisim::ArticulatedSystem *robot);
     void setSit(raisim::World* world, raisim::ArticulatedSystem* robot);
+    void setDampingMotion(raisim::World* world, raisim::ArticulatedSystem* robot);
+    void setTrot(raisim::World* world, raisim::ArticulatedSystem* robot);
+    void setPDControl(raisim::World* world, raisim::ArticulatedSystem* robot);
 
 private:
     void setBasePose();
