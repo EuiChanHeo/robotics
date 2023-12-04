@@ -12,6 +12,7 @@ class setObstacle {
 
 public:
     void setSphere(raisim::World* world, float radius, float mass, float x, float y, float z);
+    void setWall(raisim::World* world, float xLength, float yLength, float zLength, float mass, float x, float y, float z);
 };
 
 

@@ -128,7 +128,7 @@
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
-	"PARALLEL" : 4,
+	"PARALLEL" : 6,
 	"PARSE_CACHE_FILE" : "/home/percy/robot_ws/EE3100704/cmake-build-debug/examples/CMakeFiles/kinova_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/lib/qt5/bin/moc",
 	"QT_UIC_EXECUTABLE" : "/usr/lib/qt5/bin/uic",

@@ -18,7 +18,7 @@ void Canine::RunPart()
     startTime = std::chrono::steady_clock::now();
     raisim::World world;
     world.setTimeStep(0.001);
-    world.setGravity({0.0,0.0,-9.81});
+    world.setGravity({0.0,0.0,-9.8});
 
     auto ground = world.addGround();
 
@@ -29,8 +29,7 @@ void Canine::RunPart()
     canine->setName("canine");
 
     setObstacle setObstacle;
-    float radius, mass, x, y, z;
-    setObstacle.setSphere(&world, 0.1, 1.0, 1.2, 0, 0.5);
+    setObstacle.setWall(&world, 0.1, 1, 0.5, 3.0, 1.2, 0.0, 0.25);
 
     // set joint Initialization
     Eigen::VectorXd initialJointPosition(canine->getGeneralizedCoordinateDim()), jointVelocityTarget(canine->getDOF());
@@ -38,7 +37,7 @@ void Canine::RunPart()
     jointVelocityTarget.setZero();
 
     Eigen::VectorXd jointPgain(canine->getDOF()), jointDgain(canine->getDOF());
-    jointPgain.tail(12).setConstant(100.0);
+    jointPgain.tail(12).setConstant(50.0);
     jointDgain.tail(12).setConstant(1.0);
     sleep(1);
     canine->setGeneralizedCoordinate(initialJointPosition);
@@ -46,15 +45,14 @@ void Canine::RunPart()
     canine->setPdGains(jointPgain, jointDgain);
     canine->setPdTarget(initialJointPosition, jointVelocityTarget);
 
-    float timeDuration = 10.0;
-
     sleep(2);
 
     robotController controller;
 
-
     controller.setPDgain(jointPgain,jointDgain);
-    controller.setStand(&world, canine);
+//    controller.setStand_2(&world, canine);
+    controller.torque_Stand(&world, canine);
+//    controller.setSit(&world, canine);
 
     for (int i=0; i<2000000; i++)
     {

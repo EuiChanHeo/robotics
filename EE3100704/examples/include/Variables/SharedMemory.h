@@ -12,7 +12,8 @@ typedef struct _SHM_
     // Initial Position
     double init_x=0.0;
     double init_y=0.0;
-    double init_z=0.07;
+//    double init_z=0.07;
+    double init_z=0.0655;
     double init_w=1.0;
     double init_i=0.0;
     double init_j=0.0;

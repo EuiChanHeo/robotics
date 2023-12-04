@@ -14,3 +14,9 @@ void setObstacle::setSphere(raisim::World* world, float radius, float mass, floa
     ball->setPosition(x,y,z);
     ball->setVelocity(linearVelocity, angularVelocity);
 }
+
+void setObstacle::setWall(raisim::World* world, float xLength, float yLength, float zLength, float mass, float x, float y, float z)
+{
+    auto wall = world->addBox(xLength,yLength,zLength,mass);
+    wall->setPosition(x,y,z);
+}

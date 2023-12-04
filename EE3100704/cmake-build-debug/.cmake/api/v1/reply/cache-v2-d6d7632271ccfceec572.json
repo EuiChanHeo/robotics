@@ -1436,6 +1436,18 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "TRUE"
+		},
+		{
+			"name" : "raisim_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for raisim."
+				}
+			],
+			"type" : "PATH",
+			"value" : "raisim_DIR-NOTFOUND"
 		}
 	],
 	"kind" : "cache",
