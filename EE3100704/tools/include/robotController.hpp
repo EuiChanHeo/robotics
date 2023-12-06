@@ -21,7 +21,8 @@ public:
     void setStand_1(raisim::World* world, raisim::ArticulatedSystem* robot);
     void setStand_2(raisim::World *world, raisim::ArticulatedSystem *robot);
     void setStand(raisim::World *world, raisim::ArticulatedSystem *robot);
-    void torque_Stand(raisim::World *world, raisim::ArticulatedSystem *robot);
+    void torque_Stand_1(raisim::World *world, raisim::ArticulatedSystem *robot);
+    void torque_Stand_2(raisim::World *world, raisim::ArticulatedSystem *robot);
 
 private:
     void setBasePose();

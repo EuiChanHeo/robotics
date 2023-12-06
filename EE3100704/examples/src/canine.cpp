@@ -50,8 +50,8 @@ void Canine::RunPart()
     robotController controller;
 
     controller.setPDgain(jointPgain,jointDgain);
-//    controller.setStand_2(&world, canine);
-    controller.torque_Stand(&world, canine);
+    controller.setStand_2(&world, canine);
+//    controller.torque_Stand_2(&world, canine);
 //    controller.setSit(&world, canine);
 
     for (int i=0; i<2000000; i++)
