@@ -14,9 +14,10 @@ public:
     double computeForce_jump(double currentTime);
     double computeForce_z(double currentTime);
     double computeForce_jump_third(double currentTime);
-
+    double calcCoefficient(double T_start, double T_end, double T_constraint, double start_y, double currentTime, double end_y);
     double F_z,F_x;
     Eigen::Matrix <double, 4,1> Coefficient;
+    Eigen::VectorXd coefficient = Eigen::VectorXd(5);
 
 private:
     Eigen::MatrixXd mMatrixA = Eigen::MatrixXd(4, 4);
