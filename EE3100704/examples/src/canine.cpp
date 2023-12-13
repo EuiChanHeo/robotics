@@ -29,9 +29,6 @@ void Canine::RunPart()
     server.launchServer();
     canine->setName("canine");
 
-//    setObstacle setObstacle;
-//    setObstacle.setWall(&world, 0.1, 1, 0.5, 3.0, 1.2, 0.0, 0.25);
-
     // set joint Initialization
     Eigen::VectorXd initialJointPosition(canine->getGeneralizedCoordinateDim()), jointVelocityTarget(canine->getDOF());
     initialJointPosition << sharedMemory.init_x, sharedMemory.init_y, sharedMemory.init_z, sharedMemory.init_w, sharedMemory.init_i, sharedMemory.init_j, sharedMemory.init_k, sharedMemory.init_angle_1, sharedMemory.init_angle_2, sharedMemory.init_angle_3, sharedMemory.init_angle_4, sharedMemory.init_angle_5, sharedMemory.init_angle_6, sharedMemory.init_angle_7, sharedMemory.init_angle_8, sharedMemory.init_angle_9, sharedMemory.init_angle_10, sharedMemory.init_angle_11, sharedMemory.init_angle_12;
