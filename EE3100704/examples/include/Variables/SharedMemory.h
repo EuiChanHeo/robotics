@@ -93,6 +93,7 @@ typedef struct _SHM_
     double damping_angle_12=-1.91986;
 
     double duration;
+    double Force;
 } SHM, *pSHM;
 
 #endif //EE3100704_PROJECTS_SHAREDMEMORY_H

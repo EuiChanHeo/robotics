@@ -8,8 +8,10 @@
 #include "raisim/World.hpp"
 #include "raisim/RaisimServer.hpp"
 #include "setTime.hpp"
-#include "cubicTrajectoryGenerator.hpp"
+#include "cubicTrajectoryGenerator.h"
+#include "forceTrajectoryGenerator.h"
 #include "/home/percy/robot_ws/EE3100704/examples/include/Variables/SharedMemory.h"
+#include "cmath"
 
 class robotController {
 public:
@@ -18,11 +20,13 @@ public:
     void setFixedBasePosition(raisim::World* world, raisim::ArticulatedSystem* robot, float timeDuration);
     void setFloatingBasePosition(raisim::World* world, raisim::ArticulatedSystem* robot, float timeDuration);
     void setSit(raisim::World* world, raisim::ArticulatedSystem* robot);
+    void setSit_2(raisim::World* world, raisim::ArticulatedSystem* robot);
     void setStand_1(raisim::World* world, raisim::ArticulatedSystem* robot);
     void setStand_2(raisim::World *world, raisim::ArticulatedSystem *robot);
     void setStand(raisim::World *world, raisim::ArticulatedSystem *robot);
-    void torque_Stand_1(raisim::World *world, raisim::ArticulatedSystem *robot);
-    void torque_Stand_2(raisim::World *world, raisim::ArticulatedSystem *robot);
+    void torque_Stand(raisim::World *world, raisim::ArticulatedSystem *robot);
+    void Force_jump(raisim::World *world, raisim::ArticulatedSystem *robot);
+    void Force_stand(raisim::World *world, raisim::ArticulatedSystem *robot);
 
 private:
     void setBasePose();

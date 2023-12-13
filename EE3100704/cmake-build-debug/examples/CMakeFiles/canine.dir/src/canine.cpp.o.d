@@ -533,7 +533,7 @@ examples/CMakeFiles/canine.dir/src/canine.cpp.o: \
  /home/percy/Library/raisimLib/raisim/linux/include/raisim/server/Charts.hpp \
  /home/percy/Library/raisimLib/raisim/linux/include/raisim/server/SerializationHelper.hpp \
  /home/percy/Library/raisimLib/raisim/linux/include/raisim/object/ArticulatedSystem/JointAndBodies.hpp \
- /home/percy/robot_ws/EE3100704/tools/include/cubicTrajectoryGenerator.hpp \
+ /home/percy/robot_ws/EE3100704/tools/include/cubicTrajectoryGenerator.h \
  /usr/include/eigen3/Eigen/Eigen /usr/include/eigen3/Eigen/Dense \
  /usr/include/eigen3/Eigen/Sparse /usr/include/eigen3/Eigen/SparseCore \
  /usr/include/eigen3/Eigen/src/SparseCore/SparseUtil.h \
@@ -613,11 +613,11 @@ examples/CMakeFiles/canine.dir/src/canine.cpp.o: \
  /usr/include/c++/9/bits/list.tcc \
  /home/percy/robot_ws/EE3100704/tools/include/robotController.hpp \
  /home/percy/robot_ws/EE3100704/tools/include/setTime.hpp \
- /home/percy/robot_ws/EE3100704/tools/include/cubicTrajectoryGenerator.hpp \
+ /home/percy/robot_ws/EE3100704/tools/include/cubicTrajectoryGenerator.h \
+ /home/percy/robot_ws/EE3100704/tools/include/forceTrajectoryGenerator.h \
  /home/percy/robot_ws/EE3100704/examples/include/Variables/SharedMemory.h \
  /home/percy/robot_ws/EE3100704/examples/include/Variables/Variable.h \
  /home/percy/robot_ws/EE3100704/tools/include/setObstacle.hpp \
- /home/percy/robot_ws/EE3100704/examples/src/../include/Variables/SharedMemory.h \
  /home/percy/robot_ws/EE3100704/examples/src/../include/../src/robot_UI/robot_ui/mainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
@@ -705,7 +705,7 @@ examples/CMakeFiles/canine.dir/src/canine.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
  /home/percy/robot_ws/EE3100704/examples/src/../include/../src/robot_UI/robot_ui/../../../include/Variables/SharedMemory.h \
- /home/percy/robot_ws/EE3100704/examples/src/../include/../src/robot_UI/robot_ui/qcustomplot.h \
+ /home/percy/robot_ws/EE3100704/examples/src/robot_UI/robot_ui/qcustomplot.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointer \
@@ -1313,5 +1313,6 @@ examples/CMakeFiles/canine.dir/src/canine.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtPrintSupport/qtprintsupportversion.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QElapsedTimer \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimeZone \
+ /home/percy/robot_ws/EE3100704/tools/include/robotController.hpp \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QThread

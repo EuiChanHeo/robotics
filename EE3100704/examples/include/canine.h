@@ -7,12 +7,12 @@
 
 #include "raisim/RaisimServer.hpp"
 #include "raisim/World.hpp"
-#include "cubicTrajectoryGenerator.hpp"
+#include "cubicTrajectoryGenerator.h"
 #include "robotController.hpp"
 #include "setObstacle.hpp"
-#include "Variables/SharedMemory.h"
+//#include "Variables/sharedMemory.h"
 #include <iostream>
-//#include "/home/percy/robot_ws/EE3100704/examples/include/Variables/SharedMemory.h"
+#include "/home/percy/robot_ws/EE3100704/examples/include/Variables/SharedMemory.h"
 #include "../src/robot_UI/robot_ui/mainwindow.h"
 #include <QApplication>
 #include <QThread>

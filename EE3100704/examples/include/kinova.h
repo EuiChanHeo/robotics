@@ -7,7 +7,7 @@
 
 #include "raisim/RaisimServer.hpp"
 #include "raisim/World.hpp"
-#include "cubicTrajectoryGenerator.hpp"
+#include "cubicTrajectoryGenerator.h"
 #include "robotController.hpp"
 #include "setObstacle.hpp"
 

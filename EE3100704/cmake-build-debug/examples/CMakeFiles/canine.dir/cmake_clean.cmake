@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "canine_autogen"
   "CMakeFiles/canine.dir/__/tools/src/cubicTrajectoryGenerator.cpp.o"
   "CMakeFiles/canine.dir/__/tools/src/cubicTrajectoryGenerator.cpp.o.d"
+  "CMakeFiles/canine.dir/__/tools/src/forceTrajectoryGenerator.cpp.o"
+  "CMakeFiles/canine.dir/__/tools/src/forceTrajectoryGenerator.cpp.o.d"
   "CMakeFiles/canine.dir/__/tools/src/robotController.cpp.o"
   "CMakeFiles/canine.dir/__/tools/src/robotController.cpp.o.d"
   "CMakeFiles/canine.dir/__/tools/src/setObstacle.cpp.o"
@@ -16,6 +18,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/canine.dir/src/canine.cpp.o.d"
   "CMakeFiles/canine.dir/src/robot_UI/robot_ui/mainwindow.cpp.o"
   "CMakeFiles/canine.dir/src/robot_UI/robot_ui/mainwindow.cpp.o.d"
+  "CMakeFiles/canine.dir/src/robot_UI/robot_ui/qcustomplot.cpp.o"
+  "CMakeFiles/canine.dir/src/robot_UI/robot_ui/qcustomplot.cpp.o.d"
   "canine"
   "canine.pdb"
 )

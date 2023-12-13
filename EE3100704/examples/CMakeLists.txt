@@ -46,10 +46,12 @@ target_link_libraries(kinova
 
 add_executable(canine src/canine.cpp
         ../tools/src/cubicTrajectoryGenerator.cpp
+        ../tools/src/forceTrajectoryGenerator.cpp
         ../tools/src/robotController.cpp
         ../tools/src/setTime.cpp
         ../tools/src/setObstacle.cpp
         src/robot_UI/robot_ui/mainwindow.cpp
+        src/robot_UI/robot_ui/qcustomplot.cpp
 )
 
 target_link_libraries(canine

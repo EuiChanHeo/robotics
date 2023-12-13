@@ -1,7 +1,7 @@
 examples/CMakeFiles/canine.dir/__/tools/src/cubicTrajectoryGenerator.cpp.o: \
  /home/percy/robot_ws/EE3100704/tools/src/cubicTrajectoryGenerator.cpp \
  /usr/include/stdc-predef.h \
- /home/percy/robot_ws/EE3100704/tools/src/../include/cubicTrajectoryGenerator.hpp \
+ /home/percy/robot_ws/EE3100704/tools/src/../include/cubicTrajectoryGenerator.h \
  /usr/include/eigen3/Eigen/Eigen /usr/include/eigen3/Eigen/Dense \
  /usr/include/eigen3/Eigen/Core \
  /usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \

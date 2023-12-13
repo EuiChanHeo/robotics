@@ -89,6 +89,8 @@
 					<Add directory="/home/percy/robot_ws/EE3100704/cmake-build-debug/examples/kinova_autogen/include"/>
 					<Add directory="/home/percy/Library/raisimLib/raisim/linux/include"/>
 					<Add directory="/home/percy/robot_ws/EE3100704/tools/include"/>
+					<Add directory="/usr/include/python3.8"/>
+					<Add directory="/home/percy/matplotlib-cpp"/>
 					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/home/percy/robot_ws/EE3100704/examples/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
@@ -126,6 +128,8 @@
 					<Add directory="/home/percy/robot_ws/EE3100704/cmake-build-debug/examples/kinova_autogen/include"/>
 					<Add directory="/home/percy/Library/raisimLib/raisim/linux/include"/>
 					<Add directory="/home/percy/robot_ws/EE3100704/tools/include"/>
+					<Add directory="/usr/include/python3.8"/>
+					<Add directory="/home/percy/matplotlib-cpp"/>
 					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/home/percy/robot_ws/EE3100704/examples/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
@@ -169,6 +173,8 @@
 					<Add directory="/home/percy/robot_ws/EE3100704/cmake-build-debug/examples/canine_autogen/include"/>
 					<Add directory="/home/percy/Library/raisimLib/raisim/linux/include"/>
 					<Add directory="/home/percy/robot_ws/EE3100704/tools/include"/>
+					<Add directory="/usr/include/python3.8"/>
+					<Add directory="/home/percy/matplotlib-cpp"/>
 					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/home/percy/robot_ws/EE3100704/examples/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
@@ -212,6 +218,8 @@
 					<Add directory="/home/percy/robot_ws/EE3100704/cmake-build-debug/examples/canine_autogen/include"/>
 					<Add directory="/home/percy/Library/raisimLib/raisim/linux/include"/>
 					<Add directory="/home/percy/robot_ws/EE3100704/tools/include"/>
+					<Add directory="/usr/include/python3.8"/>
+					<Add directory="/home/percy/matplotlib-cpp"/>
 					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/home/percy/robot_ws/EE3100704/examples/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
@@ -249,6 +257,8 @@
 					<Add directory="/home/percy/robot_ws/EE3100704/cmake-build-debug/examples/robot_autogen/include"/>
 					<Add directory="/home/percy/Library/raisimLib/raisim/linux/include"/>
 					<Add directory="/home/percy/robot_ws/EE3100704/tools/include"/>
+					<Add directory="/usr/include/python3.8"/>
+					<Add directory="/home/percy/matplotlib-cpp"/>
 					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/home/percy/robot_ws/EE3100704/examples/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
@@ -286,6 +296,8 @@
 					<Add directory="/home/percy/robot_ws/EE3100704/cmake-build-debug/examples/robot_autogen/include"/>
 					<Add directory="/home/percy/Library/raisimLib/raisim/linux/include"/>
 					<Add directory="/home/percy/robot_ws/EE3100704/tools/include"/>
+					<Add directory="/usr/include/python3.8"/>
+					<Add directory="/home/percy/matplotlib-cpp"/>
 					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/home/percy/robot_ws/EE3100704/examples/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
@@ -366,10 +378,19 @@
 		<Unit filename="/home/percy/robot_ws/EE3100704/examples/src/robot_UI/robot_ui/mainwindow.h">
 			<Option target="canine"/>
 		</Unit>
+		<Unit filename="/home/percy/robot_ws/EE3100704/examples/src/robot_UI/robot_ui/qcustomplot.cpp">
+			<Option target="canine"/>
+		</Unit>
+		<Unit filename="/home/percy/robot_ws/EE3100704/examples/src/robot_UI/robot_ui/qcustomplot.h">
+			<Option target="canine"/>
+		</Unit>
 		<Unit filename="/home/percy/robot_ws/EE3100704/tools/src/cubicTrajectoryGenerator.cpp">
 			<Option target="kinova"/>
 			<Option target="canine"/>
 			<Option target="robot"/>
+		</Unit>
+		<Unit filename="/home/percy/robot_ws/EE3100704/tools/src/forceTrajectoryGenerator.cpp">
+			<Option target="canine"/>
 		</Unit>
 		<Unit filename="/home/percy/robot_ws/EE3100704/tools/src/robotController.cpp">
 			<Option target="kinova"/>

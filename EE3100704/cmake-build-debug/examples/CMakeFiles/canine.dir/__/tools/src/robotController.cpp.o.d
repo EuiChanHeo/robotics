@@ -532,7 +532,7 @@ examples/CMakeFiles/canine.dir/__/tools/src/robotController.cpp.o: \
  /home/percy/Library/raisimLib/raisim/linux/include/raisim/server/SerializationHelper.hpp \
  /home/percy/Library/raisimLib/raisim/linux/include/raisim/object/ArticulatedSystem/JointAndBodies.hpp \
  /home/percy/robot_ws/EE3100704/tools/include/setTime.hpp \
- /home/percy/robot_ws/EE3100704/tools/include/cubicTrajectoryGenerator.hpp \
+ /home/percy/robot_ws/EE3100704/tools/include/cubicTrajectoryGenerator.h \
  /usr/include/eigen3/Eigen/Eigen /usr/include/eigen3/Eigen/Dense \
  /usr/include/eigen3/Eigen/Sparse /usr/include/eigen3/Eigen/SparseCore \
  /usr/include/eigen3/Eigen/src/SparseCore/SparseUtil.h \
@@ -610,5 +610,6 @@ examples/CMakeFiles/canine.dir/__/tools/src/robotController.cpp.o: \
  /usr/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h \
  /usr/include/c++/9/list /usr/include/c++/9/bits/stl_list.h \
  /usr/include/c++/9/bits/list.tcc \
+ /home/percy/robot_ws/EE3100704/tools/include/forceTrajectoryGenerator.h \
  /home/percy/robot_ws/EE3100704/examples/include/Variables/SharedMemory.h \
  /home/percy/robot_ws/EE3100704/examples/include/Variables/Variable.h
