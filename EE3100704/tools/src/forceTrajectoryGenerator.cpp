@@ -16,9 +16,9 @@ double forceTrajectoryGenerator::computeForce_jump(double currentTime)
 
 double forceTrajectoryGenerator::computeForce_jump_third(double currentTime)
 {
-    Coefficient(1) = 1;
+    Coefficient(1) = -90;
 
-    F_z = 43.08 + Coefficient(1)*pow(currentTime,1) ;
+    F_z = 45.08 + 200.0 + Coefficient(1)*pow(currentTime,1) ;
 
     return F_z;
 

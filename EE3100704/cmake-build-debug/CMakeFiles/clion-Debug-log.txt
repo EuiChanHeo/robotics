@@ -1,4 +1,4 @@
-/snap/clion/259/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/usr/bin/make -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++ -G "CodeBlocks - Unix Makefiles" -S /home/percy/robot_ws/EE3100704 -B /home/percy/robot_ws/EE3100704/cmake-build-debug
+/snap/clion/260/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/usr/bin/make -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++ -G "CodeBlocks - Unix Makefiles" -S /home/percy/robot_ws/EE3100704 -B /home/percy/robot_ws/EE3100704/cmake-build-debug
 CMake Deprecation Warning:
   Support for "Extra Generators" like
 

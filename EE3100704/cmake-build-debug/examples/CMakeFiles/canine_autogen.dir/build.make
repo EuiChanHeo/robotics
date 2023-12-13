@@ -44,10 +44,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/259/bin/cmake/linux/x64/bin/cmake
+CMAKE_COMMAND = /snap/clion/260/bin/cmake/linux/x64/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/259/bin/cmake/linux/x64/bin/cmake -E rm -f
+RM = /snap/clion/260/bin/cmake/linux/x64/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -68,7 +68,7 @@ include examples/CMakeFiles/canine_autogen.dir/progress.make
 
 examples/CMakeFiles/canine_autogen:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/percy/robot_ws/EE3100704/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target canine"
-	cd /home/percy/robot_ws/EE3100704/cmake-build-debug/examples && /snap/clion/259/bin/cmake/linux/x64/bin/cmake -E cmake_autogen /home/percy/robot_ws/EE3100704/cmake-build-debug/examples/CMakeFiles/canine_autogen.dir/AutogenInfo.json Debug
+	cd /home/percy/robot_ws/EE3100704/cmake-build-debug/examples && /snap/clion/260/bin/cmake/linux/x64/bin/cmake -E cmake_autogen /home/percy/robot_ws/EE3100704/cmake-build-debug/examples/CMakeFiles/canine_autogen.dir/AutogenInfo.json Debug
 
 canine_autogen: examples/CMakeFiles/canine_autogen
 canine_autogen: examples/CMakeFiles/canine_autogen.dir/build.make

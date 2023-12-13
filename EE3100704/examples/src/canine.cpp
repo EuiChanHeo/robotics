@@ -34,8 +34,8 @@ void Canine::RunPart()
 
     // set joint Initialization
     Eigen::VectorXd initialJointPosition(canine->getGeneralizedCoordinateDim()), jointVelocityTarget(canine->getDOF());
-//    initialJointPosition << sharedMemory->init_x, sharedMemory->init_y, sharedMemory->init_z, sharedMemory->init_w, sharedMemory->init_i, sharedMemory->init_j, sharedMemory->init_k, sharedMemory->init_angle_1, sharedMemory->init_angle_2, sharedMemory->init_angle_3, sharedMemory->init_angle_4, sharedMemory->init_angle_5, sharedMemory->init_angle_6, sharedMemory->init_angle_7, sharedMemory->init_angle_8, sharedMemory->init_angle_9, sharedMemory->init_angle_10, sharedMemory->init_angle_11, sharedMemory->init_angle_12;
-    initialJointPosition << 0, 0, 0.07, 1, 0, 0, 0, 0.0872664, 1.5708, -2.76635, -0.0872664, 1.5708, -2.75587, 0.0837758, 1.5708, -2.73, -0.0837758, 1.5708, -2.73;
+    initialJointPosition << sharedMemory.init_x, sharedMemory.init_y, sharedMemory.init_z, sharedMemory.init_w, sharedMemory.init_i, sharedMemory.init_j, sharedMemory.init_k, sharedMemory.init_angle_1, sharedMemory.init_angle_2, sharedMemory.init_angle_3, sharedMemory.init_angle_4, sharedMemory.init_angle_5, sharedMemory.init_angle_6, sharedMemory.init_angle_7, sharedMemory.init_angle_8, sharedMemory.init_angle_9, sharedMemory.init_angle_10, sharedMemory.init_angle_11, sharedMemory.init_angle_12;
+//    initialJointPosition << 0, 0, 0.07, 1, 0, 0, 0, 0.0872664, 1.5708, -2.76635, -0.0872664, 1.5708, -2.75587, 0.0837758, 1.5708, -2.73, -0.0837758, 1.5708, -2.73;
     jointVelocityTarget.setZero();
 
     Eigen::VectorXd jointPgain(canine->getDOF()), jointDgain(canine->getDOF());
