@@ -21,11 +21,10 @@ public:
     void setFloatingBasePosition(raisim::World* world, raisim::ArticulatedSystem* robot, float timeDuration);
     void setSit(raisim::World* world, raisim::ArticulatedSystem* robot);
     void setSit_2(raisim::World* world, raisim::ArticulatedSystem* robot);
-    void setStand_1(raisim::World* world, raisim::ArticulatedSystem* robot);
+    void setFold(raisim::World* world, raisim::ArticulatedSystem* robot);
     void setStand_2(raisim::World *world, raisim::ArticulatedSystem *robot);
     void setStand(raisim::World *world, raisim::ArticulatedSystem *robot);
     void torque_Stand(raisim::World *world, raisim::ArticulatedSystem *robot);
-    void Force_jump(raisim::World *world, raisim::ArticulatedSystem *robot);
     void Force_stand(raisim::World *world, raisim::ArticulatedSystem *robot);
 
 private:

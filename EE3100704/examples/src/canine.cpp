@@ -29,8 +29,8 @@ void Canine::RunPart()
     server.launchServer();
     canine->setName("canine");
 
-    setObstacle setObstacle;
-    setObstacle.setWall(&world, 0.1, 1, 0.5, 3.0, 1.2, 0.0, 0.25);
+//    setObstacle setObstacle;
+//    setObstacle.setWall(&world, 0.1, 1, 0.5, 3.0, 1.2, 0.0, 0.25);
 
     // set joint Initialization
     Eigen::VectorXd initialJointPosition(canine->getGeneralizedCoordinateDim()), jointVelocityTarget(canine->getDOF());
@@ -51,7 +51,7 @@ void Canine::RunPart()
     robotController controller;
 
     controller.setPDgain(jointPgain,jointDgain);
-    controller.setStand_1(&world, canine);
+    controller.setFold(&world, canine);
     controller.Force_stand(&world, canine);
 //    controller.Force_jump(&world, canine);
 //    controller.Force_stand_2(&world, canine);
