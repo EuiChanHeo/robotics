@@ -413,6 +413,30 @@ canine_autogen/mocs_compilation.cpp.s:
 	cd /home/percy/robot_ws/EE3100704/cmake-build-debug && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/canine.dir/build.make examples/CMakeFiles/canine.dir/canine_autogen/mocs_compilation.cpp.s
 .PHONY : canine_autogen/mocs_compilation.cpp.s
 
+include/Variables/SharedMemory.o: include/Variables/SharedMemory.cpp.o
+.PHONY : include/Variables/SharedMemory.o
+
+# target to build an object file
+include/Variables/SharedMemory.cpp.o:
+	cd /home/percy/robot_ws/EE3100704/cmake-build-debug && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/canine.dir/build.make examples/CMakeFiles/canine.dir/include/Variables/SharedMemory.cpp.o
+.PHONY : include/Variables/SharedMemory.cpp.o
+
+include/Variables/SharedMemory.i: include/Variables/SharedMemory.cpp.i
+.PHONY : include/Variables/SharedMemory.i
+
+# target to preprocess a source file
+include/Variables/SharedMemory.cpp.i:
+	cd /home/percy/robot_ws/EE3100704/cmake-build-debug && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/canine.dir/build.make examples/CMakeFiles/canine.dir/include/Variables/SharedMemory.cpp.i
+.PHONY : include/Variables/SharedMemory.cpp.i
+
+include/Variables/SharedMemory.s: include/Variables/SharedMemory.cpp.s
+.PHONY : include/Variables/SharedMemory.s
+
+# target to generate assembly for a file
+include/Variables/SharedMemory.cpp.s:
+	cd /home/percy/robot_ws/EE3100704/cmake-build-debug && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/canine.dir/build.make examples/CMakeFiles/canine.dir/include/Variables/SharedMemory.cpp.s
+.PHONY : include/Variables/SharedMemory.cpp.s
+
 kinova_autogen/mocs_compilation.o: kinova_autogen/mocs_compilation.cpp.o
 .PHONY : kinova_autogen/mocs_compilation.o
 
@@ -617,6 +641,9 @@ help:
 	@echo "... canine_autogen/mocs_compilation.o"
 	@echo "... canine_autogen/mocs_compilation.i"
 	@echo "... canine_autogen/mocs_compilation.s"
+	@echo "... include/Variables/SharedMemory.o"
+	@echo "... include/Variables/SharedMemory.i"
+	@echo "... include/Variables/SharedMemory.s"
 	@echo "... kinova_autogen/mocs_compilation.o"
 	@echo "... kinova_autogen/mocs_compilation.i"
 	@echo "... kinova_autogen/mocs_compilation.s"

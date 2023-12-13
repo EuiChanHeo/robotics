@@ -2,6 +2,8 @@
 #include "ui_mainwindow.h"
 #include <QTimer>
 #include <iostream>
+#define VECTOR_SIZE 19
+#define R2D 57.2958
 
 QTimer DataTimer;
 
@@ -28,6 +30,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::GraphInitialize()
 {
+    initializeSHM(sharedMemory, VECTOR_SIZE);
     QPen myPen, dotPen, filterPen;
     myPen.setWidthF(1);
     filterPen.setStyle(Qt::DotLine);
@@ -66,7 +69,7 @@ void MainWindow::GraphInitialize()
     ui->QCP_Theta1_Trajectory->xAxis->setLabel("time (s)");
     ui->QCP_Theta1_Trajectory->yAxis->setLabel("Theta_1");
     ui->QCP_Theta1_Trajectory->xAxis->setTicker(timeTicker);
-    ui->QCP_Theta1_Trajectory->yAxis->setRange(0, 70);
+    ui->QCP_Theta1_Trajectory->yAxis->setRange(0, 180);
 
     myPen.setWidthF(1.5);
     myPen.setColor(Qt::blue);
@@ -100,8 +103,8 @@ void MainWindow::GraphUpdate()
     if (key - lastPointKey > 0.001)
     {
         ui->QCP_ForceTrajectory   -> graph(0)->addData(key, sharedMemory.Force);
-//        ui->QCP_Theta1_Trajectory -> graph(0)->addData(key, sharedMemory.currentPosition[8]);
-//        ui->QCP_Theta2Trajectory  -> graph(0)->addData(key, sharedMemory.currentPosition[9]);
+        ui->QCP_Theta1_Trajectory -> graph(0)->addData(key, sharedMemory.currentPosition->coeffRef(8)*R2D);
+        //        ui->QCP_Theta2Trajectory  -> graph(0)->addData(key, sharedMemory.currentPosition[9]);
 
         lastPointKey = key;
     }
@@ -114,6 +117,9 @@ void MainWindow::GraphUpdate()
 
     ui->QCP_Theta2Trajectory->rescaleAxes();
     ui->QCP_Theta2Trajectory->replot();
+
+
+
 }
 
 

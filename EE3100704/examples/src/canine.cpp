@@ -1,7 +1,7 @@
 #include "../include/canine.h"
+#define VECTOR_SIZE 19
 
 SHM sharedMemory;
-
 std::chrono::steady_clock::time_point startTime;
 
 void Canine::RunSimul()
@@ -79,7 +79,7 @@ public:
 
 int main (int argc, char* argv[]) {
     auto binaryPath = raisim::Path::setFromArgv(argv[0]);
-
+    initializeSHM(sharedMemory, VECTOR_SIZE);
     QApplication a(argc, argv);
     MainWindow w;
     CommunicationThread communicationThread;

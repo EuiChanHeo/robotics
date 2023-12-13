@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>961</width>
-    <height>770</height>
+    <height>963</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -24,23 +24,13 @@
      </rect>
     </property>
    </widget>
-   <widget class="QCustomPlot" name="QCP_HeadTrajectory" native="true">
+   <widget class="QCustomPlot" name="QCP_Theta1_Trajectory" native="true">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>370</y>
       <width>451</width>
-      <height>351</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QCustomPlot" name="QCP_Theta1_Trajectory" native="true">
-    <property name="geometry">
-     <rect>
-      <x>470</x>
-      <y>10</y>
-      <width>451</width>
-      <height>351</height>
+      <height>290</height>
      </rect>
     </property>
    </widget>
@@ -51,6 +41,36 @@
       <y>370</y>
       <width>451</width>
       <height>351</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QCustomPlot" name="QCP_Theta1_Trajectory_2" native="true">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>130</y>
+      <width>451</width>
+      <height>111</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QCustomPlot" name="QCP_Theta1_Trajectory_3" native="true">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>250</y>
+      <width>451</width>
+      <height>111</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QCustomPlot" name="QCP_Theta1_Trajectory_4" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>730</y>
+      <width>451</width>
+      <height>200</height>
      </rect>
     </property>
    </widget>

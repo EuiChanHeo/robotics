@@ -50,8 +50,10 @@ add_executable(canine src/canine.cpp
         ../tools/src/robotController.cpp
         ../tools/src/setTime.cpp
         ../tools/src/setObstacle.cpp
+        ../examples/include/Variables/SharedMemory.cpp
         src/robot_UI/robot_ui/mainwindow.cpp
         src/robot_UI/robot_ui/qcustomplot.cpp
+
 )
 
 target_link_libraries(canine

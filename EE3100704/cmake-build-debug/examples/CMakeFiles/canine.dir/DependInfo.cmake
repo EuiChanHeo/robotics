@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/percy/robot_ws/EE3100704/tools/src/setObstacle.cpp" "examples/CMakeFiles/canine.dir/__/tools/src/setObstacle.cpp.o" "gcc" "examples/CMakeFiles/canine.dir/__/tools/src/setObstacle.cpp.o.d"
   "/home/percy/robot_ws/EE3100704/tools/src/setTime.cpp" "examples/CMakeFiles/canine.dir/__/tools/src/setTime.cpp.o" "gcc" "examples/CMakeFiles/canine.dir/__/tools/src/setTime.cpp.o.d"
   "/home/percy/robot_ws/EE3100704/cmake-build-debug/examples/canine_autogen/mocs_compilation.cpp" "examples/CMakeFiles/canine.dir/canine_autogen/mocs_compilation.cpp.o" "gcc" "examples/CMakeFiles/canine.dir/canine_autogen/mocs_compilation.cpp.o.d"
+  "/home/percy/robot_ws/EE3100704/examples/include/Variables/SharedMemory.cpp" "examples/CMakeFiles/canine.dir/include/Variables/SharedMemory.cpp.o" "gcc" "examples/CMakeFiles/canine.dir/include/Variables/SharedMemory.cpp.o.d"
   "/home/percy/robot_ws/EE3100704/examples/src/canine.cpp" "examples/CMakeFiles/canine.dir/src/canine.cpp.o" "gcc" "examples/CMakeFiles/canine.dir/src/canine.cpp.o.d"
   "/home/percy/robot_ws/EE3100704/examples/src/robot_UI/robot_ui/mainwindow.cpp" "examples/CMakeFiles/canine.dir/src/robot_UI/robot_ui/mainwindow.cpp.o" "gcc" "examples/CMakeFiles/canine.dir/src/robot_UI/robot_ui/mainwindow.cpp.o.d"
   "/home/percy/robot_ws/EE3100704/examples/src/robot_UI/robot_ui/qcustomplot.cpp" "examples/CMakeFiles/canine.dir/src/robot_UI/robot_ui/qcustomplot.cpp.o" "gcc" "examples/CMakeFiles/canine.dir/src/robot_UI/robot_ui/qcustomplot.cpp.o.d"

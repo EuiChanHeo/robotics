@@ -14,6 +14,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/canine.dir/__/tools/src/setTime.cpp.o.d"
   "CMakeFiles/canine.dir/canine_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/canine.dir/canine_autogen/mocs_compilation.cpp.o.d"
+  "CMakeFiles/canine.dir/include/Variables/SharedMemory.cpp.o"
+  "CMakeFiles/canine.dir/include/Variables/SharedMemory.cpp.o.d"
   "CMakeFiles/canine.dir/src/canine.cpp.o"
   "CMakeFiles/canine.dir/src/canine.cpp.o.d"
   "CMakeFiles/canine.dir/src/robot_UI/robot_ui/mainwindow.cpp.o"

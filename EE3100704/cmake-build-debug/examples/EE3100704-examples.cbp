@@ -303,6 +303,12 @@
 		<Unit filename="/home/percy/robot_ws/EE3100704/cmake-build-debug/examples/robot_autogen/mocs_compilation.cpp">
 			<Option target="robot"/>
 		</Unit>
+		<Unit filename="/home/percy/robot_ws/EE3100704/examples/include/Variables/SharedMemory.cpp">
+			<Option target="canine"/>
+		</Unit>
+		<Unit filename="/home/percy/robot_ws/EE3100704/examples/include/Variables/SharedMemory.h">
+			<Option target="canine"/>
+		</Unit>
 		<Unit filename="/home/percy/robot_ws/EE3100704/examples/src/canine.cpp">
 			<Option target="canine"/>
 		</Unit>

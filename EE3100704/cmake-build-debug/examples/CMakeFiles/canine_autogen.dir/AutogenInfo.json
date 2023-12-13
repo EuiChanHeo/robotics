@@ -80,6 +80,12 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/percy/robot_ws/EE3100704/examples/include/Variables/SharedMemory.h",
+			"MU",
+			"XO2O5O6EXW/moc_SharedMemory.cpp",
+			null
+		],
+		[
 			"/home/percy/robot_ws/EE3100704/examples/src/robot_UI/robot_ui/mainwindow.h",
 			"MU",
 			"RSA42AHKCA/moc_mainwindow.cpp",
@@ -162,6 +168,11 @@
 	"SETTINGS_FILE" : "/home/percy/robot_ws/EE3100704/cmake-build-debug/examples/CMakeFiles/canine_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"/home/percy/robot_ws/EE3100704/examples/include/Variables/SharedMemory.cpp",
+			"MU",
+			null
+		],
 		[ "/home/percy/robot_ws/EE3100704/examples/src/canine.cpp", "MU", null ],
 		[
 			"/home/percy/robot_ws/EE3100704/examples/src/robot_UI/robot_ui/mainwindow.cpp",

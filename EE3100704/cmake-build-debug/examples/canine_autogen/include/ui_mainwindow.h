@@ -24,9 +24,11 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QCustomPlot *QCP_ForceTrajectory;
-    QCustomPlot *QCP_HeadTrajectory;
     QCustomPlot *QCP_Theta1_Trajectory;
     QCustomPlot *QCP_Theta2Trajectory;
+    QCustomPlot *QCP_Theta1_Trajectory_2;
+    QCustomPlot *QCP_Theta1_Trajectory_3;
+    QCustomPlot *QCP_Theta1_Trajectory_4;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -34,21 +36,27 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(961, 770);
+        MainWindow->resize(961, 963);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         QCP_ForceTrajectory = new QCustomPlot(centralwidget);
         QCP_ForceTrajectory->setObjectName(QString::fromUtf8("QCP_ForceTrajectory"));
         QCP_ForceTrajectory->setGeometry(QRect(10, 10, 451, 351));
-        QCP_HeadTrajectory = new QCustomPlot(centralwidget);
-        QCP_HeadTrajectory->setObjectName(QString::fromUtf8("QCP_HeadTrajectory"));
-        QCP_HeadTrajectory->setGeometry(QRect(10, 370, 451, 351));
         QCP_Theta1_Trajectory = new QCustomPlot(centralwidget);
         QCP_Theta1_Trajectory->setObjectName(QString::fromUtf8("QCP_Theta1_Trajectory"));
-        QCP_Theta1_Trajectory->setGeometry(QRect(470, 10, 451, 351));
+        QCP_Theta1_Trajectory->setGeometry(QRect(10, 370, 451, 290));
         QCP_Theta2Trajectory = new QCustomPlot(centralwidget);
         QCP_Theta2Trajectory->setObjectName(QString::fromUtf8("QCP_Theta2Trajectory"));
         QCP_Theta2Trajectory->setGeometry(QRect(470, 370, 451, 351));
+        QCP_Theta1_Trajectory_2 = new QCustomPlot(centralwidget);
+        QCP_Theta1_Trajectory_2->setObjectName(QString::fromUtf8("QCP_Theta1_Trajectory_2"));
+        QCP_Theta1_Trajectory_2->setGeometry(QRect(470, 130, 451, 111));
+        QCP_Theta1_Trajectory_3 = new QCustomPlot(centralwidget);
+        QCP_Theta1_Trajectory_3->setObjectName(QString::fromUtf8("QCP_Theta1_Trajectory_3"));
+        QCP_Theta1_Trajectory_3->setGeometry(QRect(470, 250, 451, 111));
+        QCP_Theta1_Trajectory_4 = new QCustomPlot(centralwidget);
+        QCP_Theta1_Trajectory_4->setObjectName(QString::fromUtf8("QCP_Theta1_Trajectory_4"));
+        QCP_Theta1_Trajectory_4->setGeometry(QRect(10, 730, 451, 200));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));

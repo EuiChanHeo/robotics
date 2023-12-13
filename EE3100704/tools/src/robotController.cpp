@@ -3,7 +3,8 @@
 //
 
 #include "robotController.hpp"
-
+#define VECTOR_SIZE 19
+#define R2D 57.2958
 extern SHM sharedMemory;
 
 void robotController::setInitialState(raisim::ArticulatedSystem *robot, Eigen::VectorXd initialPosition)
@@ -256,6 +257,8 @@ void robotController::setFold(raisim::World *world, raisim::ArticulatedSystem *r
     setTime setTime;
     float timeDuration = 1.0;
 
+    initializeSHM(sharedMemory, VECTOR_SIZE);
+
     /// set time
     setTime.setTimeInitiallize();
     setTime.timedT = 0.001;
@@ -263,11 +266,20 @@ void robotController::setFold(raisim::World *world, raisim::ArticulatedSystem *r
     Eigen::VectorXd goalPosition(robot->getGeneralizedCoordinateDim());
     Eigen::VectorXd jointPositionTarget(robot->getGeneralizedCoordinateDim()), jointVelocityTarget(robot->getDOF());
     Eigen::VectorXd currentPosition(robot->getGeneralizedCoordinateDim());
+    Eigen::VectorXd temp_currentPosition(robot->getGeneralizedCoordinateDim());
+    Eigen::VectorXd temp_currentVelocity(robot->getDOF());
     jointVelocityTarget.setZero();
 
     for (int i = 0; i < robot->getGeneralizedCoordinateDim(); i++)
     {
         currentPosition(i) = robot->getGeneralizedCoordinate()[i] ;
+    }
+
+    robot -> getState(temp_currentPosition, temp_currentVelocity);
+
+    for(int i=0;i<19;i++)
+    {
+        sharedMemory.currentPosition->coeffRef(i) = currentPosition(i);
     }
 
     // set joint fold position
@@ -282,10 +294,20 @@ void robotController::setFold(raisim::World *world, raisim::ArticulatedSystem *r
     while (1)
     {
         setTime.setLocaltime(); //get in while loop.
+
         for (int jointNum = 0; jointNum < robot->getGeneralizedCoordinateDim() ; jointNum++)
         {
             jointPositionTarget[jointNum] = trajectoryGenerator[jointNum].getPositionTrajectory(setTime.localtime);
         }
+
+        robot -> getState(temp_currentPosition, temp_currentVelocity);
+
+        for(int i=0;i<19;i++)
+        {
+            sharedMemory.currentPosition->coeffRef(i) = currentPosition(i);
+        }
+
+        std::cout << "currentPosition(8) : " << currentPosition(8) << std::endl;
 
         /// robot set stand position
 //        robot->setGeneralizedCoordinate(jointPositionTarget);
@@ -356,6 +378,7 @@ void robotController::setStand(raisim::World *world, raisim::ArticulatedSystem *
     setFold(world,robot);
     setStand_2(world,robot);
 }
+
 void robotController::setSit_2(raisim::World *world, raisim::ArticulatedSystem *robot)
 {
     cubicTrajectoryGenerator trajectoryGenerator[robot->getGeneralizedCoordinateDim()];
@@ -475,8 +498,10 @@ void robotController::Force_stand(raisim::World *world, raisim::ArticulatedSyste
 
 
     Eigen::VectorXd desiredJointPosition(12);
-    Eigen::VectorXd currentPosition(19);
-    
+
+    initializeSHM(sharedMemory, VECTOR_SIZE);
+
+    Eigen::VectorXd temp_currentPosition(19);
     Eigen::VectorXd currentVelocity(robot->getDOF());
 
     Eigen::VectorXd Jacobian(12);
@@ -488,21 +513,32 @@ void robotController::Force_stand(raisim::World *world, raisim::ArticulatedSyste
     getForce.setZero();
 
     robot -> setPdGains(mPgain, mDgain);
-    robot -> getState(currentPosition, currentVelocity);
+    robot -> getState(temp_currentPosition, currentVelocity);
+
+    for(int i=0;i<19;i++)
+    {
+        sharedMemory.currentPosition->coeffRef(i) = temp_currentPosition(i);
+    }
 
     while(true)
     {
         check_iteration ++;
         setTime.setLocaltime();
-        robot -> getState(currentPosition, currentVelocity);
+        robot -> getState(temp_currentPosition, currentVelocity);
 
+        for(int i=0;i<19;i++)
+        {
+            sharedMemory.currentPosition->coeffRef(i) = temp_currentPosition(i);
+        }
+
+        std::cout << "sharedMemory.currentPosition->coeffRef(8) : " << sharedMemory.currentPosition->coeffRef(8) * R2D <<std::endl;
         sharedMemory.Force = ForceTrajectory.calcCoefficient(0.0, 4.0, 3.5, 0.0,setTime.localtime, 45.08);
 
         for(iteration = 0; iteration < 12;)
         {
             Jacobian(iteration) = 0.0;
-            Jacobian(iteration + 1) = (- L_1 * sin(currentPosition[iteration+8]) + L_2 * cos(currentPosition[iteration+8] - currentPosition[iteration+9] - 0.785398));
-            Jacobian(iteration + 2) = 4*(- L_2 * cos(currentPosition[iteration+8] - currentPosition[iteration+9] - 0.785398));
+            Jacobian(iteration + 1) = (- L_1 * sin(temp_currentPosition[iteration+8]) + L_2 * cos(temp_currentPosition[iteration+8] - temp_currentPosition[iteration+9] - 0.785398));
+            Jacobian(iteration + 2) = 4*(- L_2 * cos(temp_currentPosition[iteration+8] - temp_currentPosition[iteration+9] - 0.785398));
             iteration += 3;
         }
 
@@ -524,20 +560,26 @@ void robotController::Force_stand(raisim::World *world, raisim::ArticulatedSyste
         }
     }
 
+    /*
     timeDuration += 2.0;
 
     while(true)
     {
         setTime.setLocaltime();
-        robot -> getState(currentPosition, currentVelocity);
+        robot -> getState(temp_currentPosition, currentVelocity);
+
+        for(int i=0;i<19;i++)
+        {
+            sharedMemory.currentPosition->coeffRef(i) = temp_currentPosition(i);
+        }
 
         sharedMemory.Force = ForceTrajectory.calcCoefficient(4.0, 6.0, 5.5, 45.08,setTime.localtime, 5.0);
 
         for(iteration = 0; iteration < 12;)
         {
             Jacobian(iteration) = 0.0;
-            Jacobian(iteration + 1) = (- L_1 * sin(currentPosition[iteration+8]) + L_2 * cos(currentPosition[iteration+8] - currentPosition[iteration+9] - 0.785398));
-            Jacobian(iteration + 2) = 4.0*(- L_2 * cos(currentPosition[iteration+8] - currentPosition[iteration+9] - 0.785398));
+            Jacobian(iteration + 1) = (- L_1 * sin(temp_currentPosition[iteration+8]) + L_2 * cos(temp_currentPosition[iteration+8] - temp_currentPosition[iteration+9] - 0.785398));
+            Jacobian(iteration + 2) = 4.0*(- L_2 * cos(temp_currentPosition[iteration+8] - temp_currentPosition[iteration+9] - 0.785398));
             iteration += 3;
         }
 
@@ -563,15 +605,20 @@ void robotController::Force_stand(raisim::World *world, raisim::ArticulatedSyste
     while(true)
     {
         setTime.setLocaltime();
-        robot -> getState(currentPosition, currentVelocity);
+        robot -> getState(temp_currentPosition, currentVelocity);
+
+        for(int i=0;i<19;i++)
+        {
+            sharedMemory.currentPosition->coeffRef(i) = temp_currentPosition(i);
+        }
 
         sharedMemory.Force = ForceTrajectory.calcCoefficient(6.0, 6.5, 6.375, 5.0,setTime.localtime, 750.0);
 
         for(iteration = 0; iteration < 12;)
         {
             Jacobian(iteration) = 0.0;
-            Jacobian(iteration + 1) = 0.3*(- L_1 * sin(currentPosition[iteration+8]) + L_2 * cos(currentPosition[iteration+8] - currentPosition[iteration+9] - 0.785398));
-            Jacobian(iteration + 2) = 6.0*(- L_2 * cos(currentPosition[iteration+8] - currentPosition[iteration+9] - 0.785398));
+            Jacobian(iteration + 1) = 0.3*(- L_1 * sin(temp_currentPosition[iteration+8]) + L_2 * cos(temp_currentPosition[iteration+8] - temp_currentPosition[iteration+9] - 0.785398));
+            Jacobian(iteration + 2) = 6.0*(- L_2 * cos(temp_currentPosition[iteration+8] - temp_currentPosition[iteration+9] - 0.785398));
             iteration += 3;
         }
 
@@ -601,15 +648,20 @@ void robotController::Force_stand(raisim::World *world, raisim::ArticulatedSyste
     while(true)
     {
         setTime.setLocaltime();
-        robot -> getState(currentPosition, currentVelocity);
+        robot -> getState(temp_currentPosition, currentVelocity);
+
+        for(int i=0;i<19;i++)
+        {
+            sharedMemory.currentPosition->coeffRef(i) = temp_currentPosition(i);
+        }
 
         sharedMemory.Force = ForceTrajectory.calcCoefficient(6.5, 7.0, 6.875, 750.0,setTime.localtime, 5.0);
 
         for(iteration = 0; iteration < 12;)
         {
             Jacobian(iteration) = 0.0;
-            Jacobian(iteration + 1) = 0.3*(- L_1 * sin(currentPosition[iteration+8]) + L_2 * cos(currentPosition[iteration+8] - currentPosition[iteration+9] - 0.785398));
-            Jacobian(iteration + 2) = 6.0*(- L_2 * cos(currentPosition[iteration+8] - currentPosition[iteration+9] - 0.785398));
+            Jacobian(iteration + 1) = 0.3*(- L_1 * sin(temp_currentPosition[iteration+8]) + L_2 * cos(temp_currentPosition[iteration+8] - temp_currentPosition[iteration+9] - 0.785398));
+            Jacobian(iteration + 2) = 6.0*(- L_2 * cos(temp_currentPosition[iteration+8] - temp_currentPosition[iteration+9] - 0.785398));
             iteration += 3;
         }
 
@@ -635,15 +687,20 @@ void robotController::Force_stand(raisim::World *world, raisim::ArticulatedSyste
     while(true)
     {
         setTime.setLocaltime();
-        robot -> getState(currentPosition, currentVelocity);
+        robot -> getState(temp_currentPosition, currentVelocity);
+
+        for(int i=0;i<19;i++)
+        {
+            sharedMemory.currentPosition->coeffRef(i) = temp_currentPosition(i);
+        }
 
         sharedMemory.Force = ForceTrajectory.calcCoefficient(7.0, 11.0, 10.0, 5.0,setTime.localtime, 45.08);
 
         for(iteration = 0; iteration < 12;)
         {
             Jacobian(iteration) = 0.0;
-            Jacobian(iteration + 1) = (- L_1 * sin(currentPosition[iteration+8]) + L_2 * cos(currentPosition[iteration+8] - currentPosition[iteration+9] - 0.785398));
-            Jacobian(iteration + 2) = 4.0*(- L_2 * cos(currentPosition[iteration+8] - currentPosition[iteration+9] - 0.785398));
+            Jacobian(iteration + 1) = (- L_1 * sin(temp_currentPosition[iteration+8]) + L_2 * cos(temp_currentPosition[iteration+8] - temp_currentPosition[iteration+9] - 0.785398));
+            Jacobian(iteration + 2) = 4.0*(- L_2 * cos(temp_currentPosition[iteration+8] - temp_currentPosition[iteration+9] - 0.785398));
             iteration += 3;
         }
 
@@ -664,5 +721,8 @@ void robotController::Force_stand(raisim::World *world, raisim::ArticulatedSyste
         }
     }
 
+//    releaseSHM(sharedMemory);
+
+     */
 }
 
