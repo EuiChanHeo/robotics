@@ -565,13 +565,19 @@ void robotController::Force_stand(raisim::World *world, raisim::ArticulatedSyste
         setTime.setLocaltime();
         robot -> getState(currentPosition, currentVelocity);
 
-        sharedMemory.Force = ForceTrajectory.calcCoefficient(6.0, 6.5, 6.375, 5.0,setTime.localtime, 750.0);
+        sharedMemory.Force = ForceTrajectory.calcCoefficient(6.0, 6.5, 6.375, 5.0,setTime.localtime, 200.0);
 
         for(iteration = 0; iteration < 12;)
         {
             Jacobian(iteration) = 0.0;
-            Jacobian(iteration + 1) = 0.3*(- L_1 * sin(currentPosition[iteration+8]) + L_2 * cos(currentPosition[iteration+8] - currentPosition[iteration+9] - 0.785398));
-            Jacobian(iteration + 2) = 6.0*(- L_2 * cos(currentPosition[iteration+8] - currentPosition[iteration+9] - 0.785398));
+            Jacobian(iteration + 1) = (- L_1 * sin(currentPosition[iteration+8]) + L_2 * cos(currentPosition[iteration+8] - currentPosition[iteration+9] - 0.785398));
+            Jacobian(iteration + 2) = 5.2*(- L_2 * cos(currentPosition[iteration+8] - currentPosition[iteration+9] - 0.785398));
+
+            if(iteration == 6 || iteration == 9)
+            {
+                Jacobian(iteration + 1) = 2.5*(- L_1 * sin(currentPosition[iteration+8]) + L_2 * cos(currentPosition[iteration+8] - currentPosition[iteration+9] - 0.785398));
+                Jacobian(iteration + 2) = 10.0*(- L_2 * cos(currentPosition[iteration+8] - currentPosition[iteration+9] - 0.785398));
+            }
             iteration += 3;
         }
 
@@ -603,7 +609,7 @@ void robotController::Force_stand(raisim::World *world, raisim::ArticulatedSyste
         setTime.setLocaltime();
         robot -> getState(currentPosition, currentVelocity);
 
-        sharedMemory.Force = ForceTrajectory.calcCoefficient(6.5, 7.0, 6.875, 750.0,setTime.localtime, 5.0);
+        sharedMemory.Force = ForceTrajectory.calcCoefficient(6.5, 7.0, 6.875, 80.0,setTime.localtime, 5.0);
 
         for(iteration = 0; iteration < 12;)
         {
@@ -630,6 +636,7 @@ void robotController::Force_stand(raisim::World *world, raisim::ArticulatedSyste
         }
     }
 
+    /*
     timeDuration += 4.0;
 
     while(true)
@@ -663,6 +670,6 @@ void robotController::Force_stand(raisim::World *world, raisim::ArticulatedSyste
             break;
         }
     }
-
+*/
 }
 
